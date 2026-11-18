@@ -1,0 +1,2054 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>THE SYSTEM v9 — Solo Leveling Life &amp; Wellness RPG</title>
+<meta name="theme-color" content="#05080f">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link id="pwa-manifest" rel="manifest" href="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Orbitron:wght@600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#05080f;--bg2:#0b1120;--cy:#00e5ff;--em:#10b981;--cr:#ef4444;--am:#f59e0b;--pu:#a855f7;--pk:#ec4899;--tx:#dbeafe;--mu:#9fb0cc;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{-webkit-tap-highlight-color:transparent;box-sizing:border-box}
+button,nav{-webkit-user-select:none;user-select:none}
+body{margin:0;background:radial-gradient(circle at 50% -20%,#0a2540,var(--bg) 60%);color:var(--tx);font:15px Inter,system-ui,sans-serif;min-height:100vh;padding-bottom:78px;font-variant-numeric:tabular-nums;overscroll-behavior:none}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+h1,h2,h3,.o{font-family:Orbitron,Inter,sans-serif;letter-spacing:.04em}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:#05080ff0;border-bottom:1px solid var(--cy);box-shadow:0 0 16px #00e5ff33;padding:8px 12px;backdrop-filter:blur(8px)}
+.hr{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.rk{width:38px;height:38px;border:2px solid var(--cy);display:grid;place-items:center;font:800 20px Orbitron;color:var(--cy);box-shadow:0 0 12px #00e5ff66;transform:rotate(45deg);flex-shrink:0}.rk span{transform:rotate(-45deg)}
+.bar{height:7px;background:#12203a;border-radius:4px;overflow:hidden}.bar i{display:block;height:100%;background:var(--cy);box-shadow:0 0 8px var(--cy);transition:width .35s cubic-bezier(.22,1,.36,1)}.bar.g i{background:var(--em);box-shadow:0 0 8px var(--em)}.bar.r i{background:var(--cr);box-shadow:0 0 8px var(--cr)}.bar.p i{background:var(--pu);box-shadow:0 0 8px var(--pu)}
+button{background:#0b1a30;color:var(--cy);border:1px solid #00e5ff66;border-radius:6px;padding:7px 11px;font:600 12px Inter;cursor:pointer;min-height:38px;transition:transform .12s,box-shadow .2s}button:hover{box-shadow:0 0 10px #00e5ff55}button:active{transform:scale(.96)}button:disabled{opacity:.45;cursor:not-allowed}
+button.p{background:var(--cy);color:#001018;font-weight:700}button.e{border-color:var(--em);color:var(--em)}button.x{border-color:var(--cr);color:var(--cr)}button.v{border-color:var(--pu);color:#d8b4fe;background:#1e1035}button.f{border-color:var(--pk);color:#f9a8d4;background:#261024}button.a{border-color:var(--am);color:#fcd34d;background:#261a05}
+nav{position:fixed;bottom:0;left:0;right:0;display:flex;background:#05080ff8;border-top:1px solid var(--cy);padding-bottom:env(safe-area-inset-bottom,0px);z-index:11;backdrop-filter:blur(8px)}
+nav button{flex:1;border:0;border-radius:0;padding:10px 2px;background:none;color:var(--mu);font-size:11px;min-height:56px;line-height:1.25}nav button.on{color:var(--cy);box-shadow:inset 0 2px var(--cy)}
+main{max-width:860px;margin:0 auto;padding:12px}
+.c{background:var(--bg2);border:1px solid #00e5ff40;border-radius:10px;padding:12px;margin-bottom:10px}.c.s{border-color:#10b98175}.c.w{border-color:#a855f780;background:linear-gradient(160deg,#130d24,#0b1120)}.c.fm{border-color:#ec489970;background:linear-gradient(160deg,#1f0d1e,#0b1120)}.c.ad{border-color:#f59e0b80;background:linear-gradient(160deg,#1f1606,#0b1120)}
+.row{display:flex;gap:8px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.mu{color:var(--mu);font-size:12px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:8px}
+.ok{border-color:var(--em)}.ok .t{text-decoration:line-through;color:var(--mu)}
+.sci{font-size:12px;margin-top:6px;padding:8px;border-radius:6px;background:#050b17;line-height:1.45}.sci b.g{color:var(--em)}.sci b.r{color:var(--cr)}
+input,select,textarea{background:#050b17;border:1px solid #1d3354;color:var(--tx);border-radius:6px;padding:7px;font:13px Inter;width:100%}label{font-size:11px;color:var(--mu);display:block}
+.mb{position:fixed;inset:0;background:#000c;z-index:25;display:grid;place-items:center;padding:12px;backdrop-filter:blur(4px)}.mc{background:var(--bg2);border:1px solid var(--cy);border-radius:12px;max-width:600px;width:100%;max-height:88vh;overflow:auto;padding:14px;box-shadow:0 0 30px #00e5ff33}
+#toast{position:fixed;top:calc(env(safe-area-inset-top,0px) + 68px);left:50%;transform:translateX(-50%);z-index:35;display:grid;gap:6px;width:min(92vw,420px);pointer-events:none}
+.tt{background:#06121ff5;border:1px solid var(--cy);padding:9px 12px;border-radius:8px;animation:in .22s;pointer-events:auto;display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:13px}.tt.r{border-color:var(--cr);color:#fecaca}@keyframes in{from{opacity:0;transform:translate3d(0,-8px,0)}}
+.tag{font-size:10px;padding:2px 6px;border-radius:4px;background:#10b98122;color:var(--em);border:1px solid #10b98150;display:inline-block}.tag.v{background:#a855f725;color:#d8b4fe;border-color:#a855f760}.tag.a{background:#f59e0b22;color:#fcd34d;border-color:#f59e0b55}.tag.f{background:#ec489925;color:#f9a8d4;border-color:#ec489960}.tag.c{background:#00e5ff20;color:var(--cy);border-color:#00e5ff60}
+.cmp{display:grid;grid-template-columns:1fr 44px 1fr;gap:6px;align-items:center;margin:6px 0;text-align:center}
+details summary{cursor:pointer;color:var(--cy);font-size:12px;font-weight:600}
+.bu{background:var(--cy);color:#001018}
+#cb{position:fixed;right:14px;bottom:calc(72px + env(safe-area-inset-bottom,0px));width:54px;height:54px;border-radius:50%;font-size:24px;padding:0;z-index:12;background:linear-gradient(135deg,var(--cy),#38bdf8);color:#001018;box-shadow:0 0 18px #00e5ff88;border:2px solid #fff5}
+.set-tbl{background:#050b17;border:1px solid #162947;border-radius:8px;padding:8px;margin:6px 0}
+.rec-bar{display:flex;align-items:center;justify-content:space-between;gap:6px;flex-wrap:wrap;background:#07182e;border:1px solid #00e5ff45;border-radius:6px;padding:6px 8px;margin-bottom:6px;font-size:12px}
+.stp{display:flex;align-items:center;gap:3px}
+.stp button{padding:0;min-height:32px;width:30px;font-size:13px;font-weight:700}
+.stp input{padding:5px 2px;font-size:13px;font-weight:700;text-align:center;min-width:44px}
+.set-row{display:grid;grid-template-columns:34px 1fr 1fr 38px 28px;gap:6px;align-items:center;margin:5px 0}
+.set-hdr{display:grid;grid-template-columns:34px 1fr 1fr 38px 28px;gap:6px;font-size:10px;color:var(--mu);text-align:center;margin-bottom:2px}
+.rtmr{display:flex;align-items:center;justify-content:space-between;gap:8px;background:#071b2e;border:1px solid var(--cy);border-radius:8px;padding:7px 10px;margin-bottom:8px;box-shadow:0 0 12px #00e5ff25}
+@media(min-width:760px){nav{position:static;border:0;max-width:860px;margin:8px auto 0;background:none}body{padding-bottom:24px}#cb{bottom:20px;right:20px}}
+button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid #fff;outline-offset:2px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+@media(prefers-color-scheme:light){:root{--bg:#f3f6fb;--bg2:#fff;--cy:#0369a1;--em:#047857;--cr:#b91c1c;--tx:#0f172a;--mu:#475569;color-scheme:light}body{background:linear-gradient(#e8f1fb,#f3f6fb)}header{background:#fffffff2;box-shadow:0 1px 8px #0002}nav{background:#fffffff5}button{background:#e6f1fa}button.p{background:var(--cy);color:#fff}.bar{background:#dbe4ef}.sci,input,select,textarea,.set-tbl{background:#f1f5f9}.tt{background:#fff}.c{border-color:#0369a140}.c.w{background:#f5f3ff}.c.fm{background:#fdf2f8}.c.ad{background:#fffbeb}.rk{box-shadow:none}.mb{background:#0007}}
+</style>
+</head>
+<body>
+<header id="hud"></header>
+<nav id="nav"></nav>
+<main id="main"></main>
+<div id="toast" aria-live="polite"></div>
+<div id="m"></div>
+<button id="cb" aria-label="Ask AI Coach" onclick="coach()">🤖</button>
+
+<script>
+/* ============================================================================
+   1. CORE STATE, INDEXEDDB MEDIA VAULT & INLINE PWA MANIFEST
+============================================================================ */
+const K = 'thesystem_v9';
+const VER = '9.0';
+const $ = s => document.querySelector(s);
+const today = () => new Date().toISOString().slice(0, 10);
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const ago = t => { const m = Math.max(1, Math.round((Date.now() - t) / 6e4)); return m < 60 ? m + 'm ago' : Math.round(m / 60) + 'h ago'; };
+
+(function initPWA() {
+  try {
+    const manifest = {
+      name: 'THE SYSTEM v8 — Solo Leveling Fitness & Wellness RPG',
+      short_name: 'THE SYSTEM',
+      start_url: '.',
+      display: 'standalone',
+      background_color: '#05080f',
+      theme_color: '#00e5ff',
+      icons: [{
+        src: 'data:image/svg+xml;utf8,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><rect width="128" height="128" rx="28" fill="#05080f"/><polygon points="64,14 114,64 64,114 14,64" fill="none" stroke="#00e5ff" stroke-width="8"/><text x="64" y="76" font-family="sans-serif" font-weight="900" font-size="44" fill="#00e5ff" text-anchor="middle">S</text></svg>'),
+        sizes: '128x128',
+        type: 'image/svg+xml'
+      }]
+    };
+    $('#pwa-manifest').href = 'data:application/manifest+json,' + encodeURIComponent(JSON.stringify(manifest));
+  } catch (e) {}
+})();
+
+const IDB = (() => {
+  let dbp = null;
+  function open() {
+    if (dbp) return dbp;
+    dbp = new Promise((res, rej) => {
+      try {
+        const req = indexedDB.open('TheSystemMediaDB_v8', 1);
+        req.onupgradeneeded = () => req.result.createObjectStore('media');
+        req.onsuccess = () => res(req.result);
+        req.onerror = () => rej(req.error);
+      } catch (e) { rej(e); }
+    });
+    return dbp;
+  }
+  return {
+    async put(key, val) {
+      try {
+        const db = await open();
+        return new Promise((res, rej) => {
+          const tx = db.transaction('media', 'readwrite');
+          tx.objectStore('media').put(val, key);
+          tx.oncomplete = () => res(true);
+          tx.onerror = () => rej(tx.error);
+        });
+      } catch (e) { return false; }
+    },
+    async del(key) {
+      try {
+        const db = await open();
+        const tx = db.transaction('media', 'readwrite');
+        tx.objectStore('media').delete(key);
+      } catch (e) {}
+    },
+    async all() {
+      try {
+        const db = await open();
+        return new Promise(res => {
+          const tx = db.transaction('media', 'readonly');
+          const store = tx.objectStore('media');
+          const out = {};
+          const cur = store.openCursor();
+          cur.onsuccess = e => {
+            const c = e.target.result;
+            if (c) { out[c.key] = c.value; c.continue(); }
+            else res(out);
+          };
+          cur.onerror = () => res({});
+        });
+      } catch (e) { return {}; }
+    },
+    async clear() {
+      try {
+        const db = await open();
+        const tx = db.transaction('media', 'readwrite');
+        tx.objectStore('media').clear();
+      } catch (e) {}
+    }
+  };
+})();
+
+let MEDIA_CACHE = {};
+
+const def = () => ({
+  p: {
+    name: 'Sung',
+    title: 'The Awakened',
+    sex: 'm',
+    fstage: 'std',
+    age: 28,
+    h: 172,
+    w: 82,
+    tw: 72,
+    act: 1.375,
+    tier: 'bal',
+    eq: 'body',
+    diet: 'Indian High-Protein Veg',
+    days: 30
+  },
+  w0: 82,
+  xp: 0,
+  done: {},
+  prog: {},
+  shuf: {},
+  setLogs: {}, // { "day_exIdx": [ { reps: 10, kg: 15, done: true }, ... ] }
+  prs: {},     // { "Exercise Name": { maxKg: 20, maxVol: 600, bestStr: "20 kg × 10" } }
+  log: {},
+  water: {},   // { "YYYY-MM-DD": 2.5 } (litres logged)
+  combos: [
+    { n: 'Desi Protein Breakfast', items: [['Boiled egg', 2], ['Whole wheat roti', 2], ['Curd / dahi (1 cup)', 1]] },
+    { n: 'Soya & Dal Power Lunch', items: [['Soya chunks (30 g)', 1.5], ['Moong dal (1 cup)', 1], ['Whole wheat roti', 2]] }
+  ],
+  grocDone: {},
+  sanct: {},
+  stats: { STR: 10, AGI: 10, INT: 10, VIT: 10, SEN: 10 },
+  streak: 1,
+  freeze: 1,
+  last: '',
+  start: today(),
+  wt: [],
+  meas: [],
+  mute: 0,
+  custom: [],
+  cal: {},
+  boss: { wk: '', dmg: 12400, max: 20000, claimed: false },
+  extraQuests: [],
+  duels: [
+    { id: 'd1', opp: 'IronBhai@guild.in', myStartXp: 0, oppStartXp: 0, oppGain: 210, ends: 'In 5 days', active: true }
+  ],
+  acct: { email: '', signedIn: false, isAdmin: false, orgCode: '' },
+  b2b: {
+    orgs: [
+      { id: 'org1', name: 'Iron Temple Gym Indore', type: 'Gym', email: 'owner@irontemple.in', status: 'approved', code: 'GYM-IRON88', members: 142, challenge: '30-Day Monsoon Shred' },
+      { id: 'org2', name: 'Apex Tech Solutions', type: 'Company', email: 'hr@apextech.io', status: 'pending', code: 'CORP-APEX26', members: 85, challenge: '10k Steps Desk Battle' }
+    ],
+    globalEvent: { title: 'Winter Arc — Global S-Rank Awakening', desc: 'Complete 3+ daily quests for 21 straight days to earn the Frost Monarch Title!', active: true },
+    users: [
+      { email: 'ShadowMonarch_K@guild.in', name: 'ShadowMonarch_K', lv: 34, disabled: false },
+      { email: 'IronBhai@guild.in', name: 'IronBhai', lv: 22, disabled: false },
+      { email: 'PriyaFit@guild.in', name: 'PriyaFit', lv: 13, disabled: false }
+    ]
+  },
+  priv: { on: 1, name: 1, rank: 1, stats: 1, prog: 1, bio: 0 }
+});
+
+let S;
+try {
+  const parsed = JSON.parse(localStorage.getItem(K) || '{}');
+  S = Object.assign(def(), parsed);
+  S.p = Object.assign(def().p, parsed.p || {});
+  S.acct = Object.assign(def().acct, parsed.acct || {});
+  S.b2b = Object.assign(def().b2b, parsed.b2b || {});
+  S.priv = Object.assign(def().priv, parsed.priv || {});
+} catch (e) {
+  S = def();
+}
+
+const save = () => {
+  try {
+    localStorage.setItem(K, JSON.stringify(S));
+  } catch (e) {
+    if (!window.sw) {
+      window.sw = 1;
+      toast('LocalStorage full. Photos are safely stored in IndexedDB.', 1);
+    }
+  }
+};
+
+(async function hydrateMedia() {
+  const stored = await IDB.all();
+  MEDIA_CACHE = stored || {};
+  R();
+})();
+
+// Parse 1-click Coach Plan Link (#plan=...)
+(function checkCoachHash() {
+  try {
+    if (location.hash && location.hash.startsWith('#plan=')) {
+      const raw = decodeURIComponent(location.hash.slice(6));
+      const cfg = JSON.parse(atob(raw));
+      if (cfg && cfg.w && cfg.h) {
+        Object.assign(S.p, cfg);
+        S.w0 = +cfg.w;
+        S.start = today();
+        S.ob = 1;
+        save();
+        history.replaceState(null, '', location.pathname + location.search);
+        setTimeout(() => toast('Coach Blueprint calibrated for ' + S.p.name + '!'), 350);
+      }
+    }
+  } catch (e) {}
+})();
+
+let tab = 0, pen = 0, freezeUsed = 0, streakLockedToday = false, ac;
+
+(function checkDailyReset() {
+  const t = today();
+  if (S.last && S.last !== t) {
+    const n = Object.keys(S.done[S.last] || {}).length;
+    if (n < 3 && !S.cal[S.last]) {
+      if ((S.freeze || 0) > 0) {
+        S.freeze -= 1;
+        freezeUsed = 1;
+      } else {
+        S.streak = 0;
+        pen = 1;
+      }
+    } else {
+      S.streak++;
+    }
+  }
+  S.last = t;
+  const d = new Date();
+  const wkKey = d.getFullYear() + '-W' + Math.ceil((((d - new Date(d.getFullYear(), 0, 1)) / 86400000) + 1) / 7);
+  if (!S.boss || S.boss.wk !== wkKey) {
+    S.boss = { wk: wkKey, dmg: 11800, max: 20000, claimed: false };
+  }
+  save();
+})();
+
+/* ============================================================================
+   2. AUDIO, TOAST WITH UNDO, LEVELING & BOSS DAMAGE
+============================================================================ */
+function snd(f, d = .12) {
+  try { navigator.vibrate && navigator.vibrate(12); } catch (e) {}
+  if (S.mute) return;
+  try {
+    ac = ac || new (window.AudioContext || window.webkitAudioContext)();
+    const o = ac.createOscillator(), g = ac.createGain();
+    o.type = 'triangle';
+    o.frequency.value = f;
+    g.gain.value = .045;
+    o.connect(g);
+    g.connect(ac.destination);
+    o.start();
+    o.stop(ac.currentTime + d);
+  } catch (e) {}
+}
+
+function toast(text, isErr = 0, undoFn = null) {
+  const el = document.createElement('div');
+  el.className = 'tt' + (isErr ? ' r' : '');
+  const span = document.createElement('span');
+  span.textContent = text;
+  el.appendChild(span);
+  if (undoFn) {
+    const btn = document.createElement('button');
+    btn.textContent = 'Undo';
+    btn.style.cssText = 'padding:4px 9px;min-height:28px;font-size:11px;border-color:var(--cy)';
+    btn.onclick = () => { undoFn(); el.remove(); };
+    el.appendChild(btn);
+  }
+  $('#toast').appendChild(el);
+  setTimeout(() => el.remove(), undoFn ? 5000 : 3000);
+}
+
+const lv = () => {
+  let x = S.xp, l = 1;
+  while (x >= l * 100) { x -= l * 100; l++; }
+  return { l, x, n: l * 100 };
+};
+const rank = l => l < 5 ? 'E' : l < 10 ? 'D' : l < 15 ? 'C' : l < 25 ? 'B' : l < 40 ? 'A' : 'S';
+const PV = () => S.priv = Object.assign({ on: 1, name: 1, rank: 1, stats: 1, prog: 1, bio: 0 }, S.priv || {});
+const pubName = () => PV().name ? S.p.name : 'Anonymous Shadow';
+const gp = () => {
+  if (isMaternal()) return Math.min(100, Math.round((dayNo() / Math.max(1, S.p.days)) * 100));
+  return Math.round(Math.max(0, Math.min(100, (S.w0 - S.p.w) / Math.max(.1, S.w0 - S.p.tw) * 100)));
+};
+
+function addXp(n) {
+  const a = lv().l;
+  S.xp += n;
+  if (S.boss && !S.boss.claimed) {
+    S.boss.dmg = Math.min(S.boss.max, (S.boss.dmg || 0) + n * 18);
+    if (S.boss.dmg >= S.boss.max && !S.boss.claimed) {
+      S.boss.claimed = true;
+      S.p.title = 'Titan Slayer';
+      toast('BOSS DEFEATED! New Title Unlocked: Titan Slayer (+150 XP)');
+      S.xp += 150;
+    }
+  }
+  const b = lv().l;
+  if (b > a) {
+    toast('LEVEL UP — Level ' + b + '. ARISE.');
+    [520, 660, 880].forEach((f, i) => setTimeout(() => snd(f, .18), i * 120));
+  }
+}
+
+/* ============================================================================
+   3. CLEAN GENDER-AWARE ROUTING & CLINICAL METABOLIC ENGINE
+============================================================================ */
+const FEMALE_STAGES = [
+  ['std', 'Standard Wellness'],
+  ['pcos', 'Cycle & PCOS Support'],
+  ['preg1', 'Pregnancy — Trimester 1'],
+  ['preg2', 'Pregnancy — Trimester 2'],
+  ['preg3', 'Pregnancy — Trimester 3'],
+  ['post', 'Postpartum / Lactating']
+];
+
+const isFemale = () => S.p.sex === 'f';
+const activeFStage = () => isFemale() ? (S.p.fstage || 'std') : 'std';
+const isMaternal = () => isFemale() && ['preg1', 'preg2', 'preg3', 'post'].includes(activeFStage());
+const fStageLabel = () => (FEMALE_STAGES.find(x => x[0] === activeFStage()) || FEMALE_STAGES[0])[1];
+
+function setFemaleStage(val) {
+  S.p.fstage = val;
+  save();
+  snd(640);
+  toast('Women\'s Wellness mode updated: ' + fStageLabel());
+  verifyAntiCheatQuests(true);
+  R();
+}
+
+function vFemaleCard() {
+  if (!isFemale()) return '';
+  const st = activeFStage();
+  const mat = isMaternal();
+  return `<div class="c fm"><div class="row"><b>🌸 Women's Wellness</b><span class="tag f">${esc(fStageLabel())}</span></div><div class="mu" style="margin:4px 0 8px">${mat ? 'Maternal Safety Shield active: deficit disabled, gestational/lactation nourishment enabled, and unsafe exercises replaced with pelvic-safe movements.' : st === 'pcos' ? 'Cycle & PCOS mode: gentle 15% deficit with low-glycemic & high-fiber focus.' : 'Optional life-stage tailoring for cycle, PCOS, pregnancy, or postpartum.'}</div><select onchange="setFemaleStage(this.value)" aria-label="Women's Wellness Stage">${FEMALE_STAGES.map(x => `<option value="${x[0]}" ${st === x[0] ? 'selected' : ''}>${x[1]}</option>`).join('')}</select></div>`;
+}
+
+function calc() {
+  const p = S.p, w = +p.w, isMale = p.sex === 'm', fst = activeFStage();
+  const bmr = 10 * w + 6.25 * p.h - 5 * p.age + (isMale ? 5 : -161);
+  const tdee = bmr * p.act;
+
+  let targetKcal, proteinMult = 1.8, modeNote = '';
+  if (fst === 'preg1') {
+    targetKcal = Math.max(1650, tdee);
+    proteinMult = 1.5;
+    modeNote = 'Trimester 1 Gestational Nourishment (+0 kcal deficit; folate & iron focus)';
+  } else if (fst === 'preg2') {
+    targetKcal = Math.max(1850, tdee + 340);
+    proteinMult = 1.6;
+    modeNote = 'Trimester 2 Maternal Energy (+340 kcal/day for baby\'s growth)';
+  } else if (fst === 'preg3') {
+    targetKcal = Math.max(1950, tdee + 450);
+    proteinMult = 1.65;
+    modeNote = 'Trimester 3 Maternal Energy (+450 kcal/day; calcium & iron priority)';
+  } else if (fst === 'post') {
+    targetKcal = Math.max(1800, tdee + 300);
+    proteinMult = 1.75;
+    modeNote = 'Postpartum & Lactation Support (+300 kcal/day; gentle pelvic recovery)';
+  } else if (fst === 'pcos') {
+    targetKcal = Math.max(tdee * 0.85, 1350);
+    proteinMult = 1.9;
+    modeNote = 'PCOS Low-Glycemic Recomposition (15% gentle deficit, high protein & fiber)';
+  } else {
+    targetKcal = Math.max(tdee * 0.8, isMale ? 1500 : 1200);
+    proteinMult = 1.8;
+    modeNote = 'Evidence-Based 20% Recomposition Deficit';
+  }
+
+  const pr = Math.round(w * proteinMult * (p.age >= 40 ? 1.1 : 1));
+  const f = Math.round(w * 0.85);
+  const c = Math.max(50, Math.round((targetKcal - pr * 4 - f * 9) / 4));
+  const defKcal = Math.max(150, Math.abs(tdee - targetKcal));
+  return { bmr: Math.round(bmr), tdee: Math.round(tdee), t: Math.round(targetKcal), pr, f, c, bmi: w / Math.pow(p.h / 100, 2), def: defKcal, modeNote };
+}
+
+function pdn(t) {
+  let n = 0, d = new Date(S.start);
+  const e = new Date(t);
+  while (d <= e) {
+    if (!S.cal[d.toISOString().slice(0, 10)]) n++;
+    d.setDate(d.getDate() + 1);
+  }
+  return n;
+}
+const dayNo = () => Math.min(S.p.days, Math.max(1, pdn(today())));
+
+/* ============================================================================
+   4. PROGRAM ENGINE: RECOMMENDED WEIGHT, EASY LIFT/REPS LOGGER & PR DETECTOR
+============================================================================ */
+const EX_POOLS = {
+  maternal: [
+    ['Cat-Cow spine relief', 3, 10, 0, 0],
+    ['Pelvic tilts (standing or quadruped)', 3, 12, 0, 0],
+    ['Side-lying clamshells', 3, 12, 0, 0],
+    ['Supported wall sit (sec)', 3, 30, 0, 0],
+    ['Kegels & 360° breathing', 3, 8, 0, 0]
+  ],
+  joint: [
+    ['Wall push-ups', 3, 12, 0, 0],
+    ['Chair squats', 3, 12, 0, 0],
+    ['Glute bridges', 3, 15, 0, 0],
+    ['Standing knee marches', 3, 20, 0, 0],
+    ['Dead bug', 3, 10, 0, 0]
+  ],
+  bal: [
+    ['Push-ups', 3, 12, 0, 0],
+    ['Bodyweight squats', 3, 15, 0, 0],
+    ['Reverse lunges', 3, 10, 0, 0],
+    ['Plank (sec)', 3, 35, 0, 0],
+    ['Mountain climbers', 3, 20, 0, 0]
+  ],
+  hiit: [
+    ['Burpees', 4, 12, 0, 0],
+    ['Jump squats', 4, 15, 0, 0],
+    ['Diamond push-ups', 4, 10, 0, 0],
+    ['High knees (sec)', 4, 40, 0, 0],
+    ['Plank to push-up', 4, 12, 0, 0]
+  ],
+  gym: [
+    ['Leg press', 4, 12, 40, 0.55],
+    ['Machine chest press', 3, 10, 25, 0.30],
+    ['Lat pulldown', 3, 12, 30, 0.35],
+    ['Dumbbell shoulder press', 3, 10, 10, 0.14],
+    ['Plank (sec)', 3, 40, 0, 0]
+  ],
+  dumb: [
+    ['Goblet squat', 3, 12, 10, 0.18],
+    ['Dumbbell floor press', 3, 12, 10, 0.16],
+    ['One-arm dumbbell row', 3, 10, 12, 0.18],
+    ['Overhead dumbbell press', 3, 10, 8, 0.12],
+    ['Dumbbell Romanian deadlift', 3, 12, 12, 0.20]
+  ],
+  desi: [
+    ['Baithak (Hindu squats)', 3, 20, 0, 0],
+    ['Dand (Hindu push-ups)', 3, 10, 0, 0],
+    ['Surya Namaskar rounds', 3, 4, 0, 0],
+    ['Naukasana (boat pose sec)', 3, 25, 0, 0],
+    ['Chair dips', 3, 12, 0, 0]
+  ]
+};
+
+const ALT_POOLS = {
+  maternal: [
+    ['Prenatal brisk walk (min)', 1, 15, 0, 0],
+    ['Supported chair squats', 3, 10, 0, 0],
+    ['Wall push-ups', 3, 10, 0, 0],
+    ['Seated resistance band row', 3, 12, 2, 0.04],
+    ['Bird-dog (gentle core)', 3, 8, 0, 0]
+  ],
+  joint: [
+    ['Step-ups (low step)', 3, 12, 0, 0],
+    ['Incline push-ups', 3, 12, 0, 0],
+    ['Seated band row', 3, 15, 2, 0.04],
+    ['Bird-dog', 3, 10, 0, 0],
+    ['Standing calf raises', 3, 15, 0, 0]
+  ],
+  bal: [
+    ['Incline push-ups', 3, 15, 0, 0],
+    ['Glute bridges', 3, 15, 0, 0],
+    ['Split squats', 3, 10, 0, 0],
+    ['Side plank (sec)', 3, 30, 0, 0],
+    ['Shadowboxing (sec)', 3, 60, 0, 0]
+  ],
+  hiit: [
+    ['Squat thrusts', 4, 15, 0, 0],
+    ['Alternating jump lunges', 4, 16, 0, 0],
+    ['Decline push-ups', 4, 12, 0, 0],
+    ['Mountain climbers (sec)', 4, 45, 0, 0],
+    ['V-ups', 4, 15, 0, 0]
+  ],
+  gym: [
+    ['Goblet squat', 4, 12, 15, 0.22],
+    ['Seated cable row', 3, 12, 30, 0.35],
+    ['Incline dumbbell press', 3, 10, 12, 0.16],
+    ['Dumbbell Romanian deadlift', 3, 12, 15, 0.24],
+    ['Hanging knee raises', 3, 12, 0, 0]
+  ],
+  dumb: [
+    ['Dumbbell lunges', 3, 10, 8, 0.12],
+    ['Push-ups', 3, 15, 0, 0],
+    ['Bent-over dumbbell row', 3, 12, 10, 0.16],
+    ['Arnold press', 3, 10, 8, 0.12],
+    ['Glute bridges (weighted)', 3, 15, 10, 0.18]
+  ],
+  desi: [
+    ['Baithak (jump variation)', 3, 15, 0, 0],
+    ['Pehlwani dand', 3, 10, 0, 0],
+    ['Gada / dumbbell swings', 3, 15, 8, 0.12],
+    ['Bhujangasana (cobra sec)', 3, 30, 0, 0],
+    ['Plank (sec)', 3, 40, 0, 0]
+  ]
+};
+
+// Dynamic Recommended Weight & Reps Engine based on user BW, sex, mobility tier & previous PRs
+function getRecommendedTarget(exName, baseSets, baseReps, baseKg, bwRatio = 0) {
+  const bw = +S.p.w || 70;
+  const sexMult = S.p.sex === 'f' ? 0.72 : 1.0;
+  const tierMult = S.p.tier === 'joint' ? 0.75 : S.p.tier === 'hiit' ? 1.15 : 1.0;
+  const pr = (S.prs || {})[exName];
+  const isWeighted = baseKg > 0 || bwRatio > 0 || (pr && pr.maxKg > 0);
+
+  let recKg = 0;
+  let recReps = baseReps;
+
+  if (isWeighted) {
+    const rawCalc = bwRatio > 0 ? bw * bwRatio * sexMult * tierMult : baseKg * sexMult * tierMult;
+    const roundedCalc = Math.max(2.5, Math.round(rawCalc / 2.5) * 2.5);
+    if (pr && pr.maxKg > 0) {
+      // Auto-progress by +2.5 kg if user already hit target reps at their previous max weight
+      recKg = (pr.repsAtMax || 0) >= baseReps ? +(pr.maxKg + 2.5).toFixed(1) : pr.maxKg;
+    } else {
+      recKg = roundedCalc;
+    }
+  } else {
+    if (pr && (pr.maxReps || 0) >= baseReps) {
+      recReps = pr.maxReps + 2;
+    }
+  }
+
+  return {
+    sets: baseSets,
+    reps: recReps,
+    kg: recKg,
+    isWeighted,
+    label: isWeighted ? `${recKg} kg × ${recReps} reps` : `Bodyweight × ${recReps}`
+  };
+}
+
+function getRawExercises(d) {
+  if (d % 4 === 0) {
+    return isMaternal()
+      ? [['Gentle evening walk (min)', 1, 15, 0, 0], ['Cat-Cow & hip mobility (min)', 1, 8, 0, 0], ['Pelvic floor & deep breathing (min)', 1, 5, 0, 0]]
+      : [['Active recovery: easy walk (min)', 1, 20, 0, 0], ['Full-body mobility stretch (min)', 1, 10, 0, 0], ['Box breathing (min)', 1, 5, 0, 0]];
+  }
+  const key = isMaternal() ? 'maternal' : ((S.p.eq && S.p.eq !== 'body') ? S.p.eq : (S.p.tier || 'bal'));
+  const sh = (S.shuf && S.shuf[d]) || 0;
+  const source = ((d + sh) % 2 === 0 ? ALT_POOLS[key] : EX_POOLS[key]) || EX_POOLS.bal;
+  const progReps = Math.floor(d / 7) * 2;
+  return source.map(([name, sets, reps, kg, ratio]) => [
+    name,
+    sets,
+    reps + (name.includes('(min)') ? 0 : progReps),
+    kg,
+    ratio || 0
+  ]);
+}
+
+function getExerciseSets(d, idx, defaultSets, defaultReps, defaultKg, bwRatio = 0) {
+  S.setLogs = S.setLogs || {};
+  const k = `${d}_${idx}`;
+  if (!S.setLogs[k] || !Array.isArray(S.setLogs[k])) {
+    const exName = getRawExercises(d)[idx]?.[0] || '';
+    const rec = getRecommendedTarget(exName, defaultSets, defaultReps, defaultKg, bwRatio);
+    S.setLogs[k] = Array.from({ length: defaultSets }, () => ({
+      reps: rec.reps,
+      kg: rec.kg,
+      done: false
+    }));
+  }
+  return S.setLogs[k];
+}
+
+function applyRecommendedToSets(d, idx) {
+  const ex = getRawExercises(d)[idx];
+  if (!ex) return;
+  const rec = getRecommendedTarget(ex[0], ex[1], ex[2], ex[3], ex[4]);
+  const sets = getExerciseSets(d, idx, ex[1], ex[2], ex[3], ex[4]);
+  sets.forEach(s => {
+    if (!s.done) {
+      s.kg = rec.kg;
+      s.reps = rec.reps;
+    }
+  });
+  save();
+  snd(600, .08);
+  toast(`Applied Recommended Target (${rec.label})!`);
+  R();
+}
+
+function stepSetField(d, idx, setIdx, field, delta) {
+  const ex = getRawExercises(d)[idx];
+  const sets = getExerciseSets(d, idx, ex[1], ex[2], ex[3], ex[4]);
+  if (!sets[setIdx]) return;
+  const next = Math.max(0, +((sets[setIdx][field] || 0) + delta).toFixed(1));
+  sets[setIdx][field] = next;
+  save();
+  snd(520, .05);
+  R();
+}
+
+function updateSetField(d, idx, setIdx, field, val) {
+  const ex = getRawExercises(d)[idx];
+  const sets = getExerciseSets(d, idx, ex[1], ex[2], ex[3], ex[4]);
+  if (!sets[setIdx]) return;
+  sets[setIdx][field] = Math.max(0, parseFloat(val) || 0);
+  save();
+}
+
+function addSetRow(d, idx) {
+  const ex = getRawExercises(d)[idx];
+  const sets = getExerciseSets(d, idx, ex[1], ex[2], ex[3], ex[4]);
+  const last = sets[sets.length - 1] || { reps: ex[2], kg: ex[3] };
+  sets.push({ reps: last.reps, kg: last.kg, done: false });
+  save();
+  R();
+  if ($('#m .mc')) qd('w');
+}
+
+function removeSetRow(d, idx) {
+  const ex = getRawExercises(d)[idx];
+  const sets = getExerciseSets(d, idx, ex[1], ex[2], ex[3], ex[4]);
+  if (sets.length <= 1) return;
+  sets.pop();
+  save();
+  checkExerciseAndDayCompletion(d, idx);
+  R();
+  if ($('#m .mc')) qd('w');
+}
+
+function toggleSetDone(d, idx, setIdx) {
+  const ex = getRawExercises(d)[idx];
+  const sets = getExerciseSets(d, idx, ex[1], ex[2], ex[3], ex[4]);
+  const s = sets[setIdx];
+  if (!s) return;
+  s.done = !s.done;
+
+  if (s.done) {
+    snd(680, .09);
+    startRestTimer(60);
+    // Check Personal Record (PR) on weight, reps at max weight, or volume
+    const exName = ex[0];
+    S.prs = S.prs || {};
+    const prev = S.prs[exName] || { maxKg: 0, repsAtMax: 0, maxVol: 0, maxReps: 0, bestStr: '' };
+    const vol = (s.kg || 0) * (s.reps || 0);
+    let newPr = false;
+    if (s.kg > 0 && s.kg > prev.maxKg) {
+      prev.maxKg = s.kg;
+      prev.repsAtMax = s.reps;
+      prev.bestStr = `${s.kg} kg × ${s.reps}`;
+      newPr = true;
+    } else if (s.kg > 0 && s.kg === prev.maxKg && s.reps > (prev.repsAtMax || 0)) {
+      prev.repsAtMax = s.reps;
+      prev.bestStr = `${s.kg} kg × ${s.reps}`;
+      newPr = true;
+    } else if (vol > 0 && vol > prev.maxVol) {
+      prev.maxVol = vol;
+      prev.bestStr = `${s.kg} kg × ${s.reps}`;
+      newPr = true;
+    } else if (s.kg === 0 && s.reps > (prev.maxReps || 0)) {
+      prev.maxReps = s.reps;
+      prev.bestStr = `${s.reps} reps`;
+      if (prev.maxReps > ex[2]) newPr = true;
+    }
+    S.prs[exName] = prev;
+    if (newPr) {
+      addXp(15);
+      S.stats.STR++;
+      toast(`🏆 NEW PR on ${exName}: ${prev.bestStr}! (+15 XP, +1 STR)`);
+    }
+  }
+
+  checkExerciseAndDayCompletion(d, idx);
+  save();
+  R();
+  if ($('#m .mc')) qd('w');
+}
+
+function checkExerciseAndDayCompletion(d, idx) {
+  const exList = getRawExercises(d);
+  const p = S.prog[d] = S.prog[d] || {};
+  exList.forEach((ex, i) => {
+    const sets = getExerciseSets(d, i, ex[1], ex[2], ex[3], ex[4]);
+    if (sets.length > 0 && sets.every(s => s.done)) p[i] = 1;
+    else delete p[i];
+  });
+
+  const doneCount = exList.filter((_, i) => p[i]).length;
+  if (doneCount === exList.length && !p.x) {
+    p.x = 1;
+    addXp(25);
+    S.stats.STR++;
+    toast('Day ' + d + ' Workout Cleared! +25 XP');
+    snd(780);
+  }
+  if (d === dayNo()) {
+    verifyAntiCheatQuests(true);
+  }
+}
+
+let REST_END = 0, REST_INT = null;
+function startRestTimer(sec = 60) {
+  REST_END = Date.now() + sec * 1000;
+  if (REST_INT) clearInterval(REST_INT);
+  REST_INT = setInterval(() => {
+    const rem = Math.ceil((REST_END - Date.now()) / 1000);
+    const el = $('#rest_cd');
+    if (rem <= 0) {
+      clearInterval(REST_INT);
+      REST_INT = null;
+      REST_END = 0;
+      snd(880, .2);
+      toast('⏱️ Rest complete! Start your next set.');
+      R();
+    } else if (el) {
+      el.textContent = rem + 's';
+    }
+  }, 250);
+}
+function stopRestTimer() {
+  if (REST_INT) clearInterval(REST_INT);
+  REST_INT = null;
+  REST_END = 0;
+  R();
+}
+
+function shareClientSummaryCard() {
+  const c = calc();
+  const endDt = new Date();
+  endDt.setDate(endDt.getDate() + Math.max(1, S.p.days - dayNo() + 1));
+  const summary = `⚡ THE SYSTEM — Client Blueprint for ${S.p.name}\n` +
+    `• Daily Nutrition: ${c.t} kcal | ${c.pr}g Protein | ${c.c}g Carbs | ${c.f}g Fat\n` +
+    `• Training Rhythm: 35-Min Compound Strength + 10-Min Post-Meal Walks (${S.p.eq || 'bodyweight'})\n` +
+    `• Hydration & NEAT: 3.0L Water + ${isMaternal() ? '6,000' : '8,000'} Daily Steps\n` +
+    `• Target Goal: ${isMaternal() ? fStageLabel() : S.p.tw + ' kg'} by ${endDt.toLocaleDateString('en-IN', { day: 'numeric', month: 'short' })}\n` +
+    `• Level ${lv().l} (Rank ${rank(lv().l)}) · ${S.streak}-Day Streak`;
+  modal(`<h3 class="o">📋 Client Coaching Summary</h3>
+    <div class="mu" style="margin-bottom:6px">Copy or share this structured transformation summary directly with your client:</div>
+    <textarea id="cs_txt" style="height:150px;margin-bottom:8px">${esc(summary)}</textarea>
+    <div class="row">
+      <button class="p" onclick="const t=$('#cs_txt');t.select();document.execCommand('copy');toast('Client summary copied!')">Copy Summary</button>
+      <a href="https://wa.me/?text=${encodeURIComponent(summary)}" target="_blank" rel="noopener" style="background:var(--em);color:#001018;padding:9px 12px;border-radius:6px;font:700 12px Inter;text-decoration:none">Send on WhatsApp</a>
+      <button onclick="closeM()">Close</button>
+    </div>`);
+}
+
+function shuffleWorkout(d) {
+  S.shuf = S.shuf || {};
+  S.shuf[d] = ((S.shuf[d] || 0) + 1) % 2;
+  delete S.prog[d];
+  if (S.setLogs) {
+    Object.keys(S.setLogs).forEach(k => { if (k.startsWith(d + '_')) delete S.setLogs[k]; });
+  }
+  save();
+  snd(580);
+  toast('Routine shuffled! Fresh exercises loaded.');
+  R();
+  if ($('#m .mc')) qd('w');
+}
+
+// Stick-figure SVG guides
+const PO = {
+  stand: { hd: [50, 8], s: [50, 16], h: [50, 38], a: [53, 26], l: [[50, 50, 50, 62]] },
+  arms: { hd: [46, 8], s: [50, 16], h: [52, 38], a: [40, 2], l: [[52, 50, 52, 62]] },
+  fold: { hd: [40, 50], s: [42, 44], h: [52, 36], a: [44, 60], l: [[52, 50, 52, 62]] },
+  lunge: { hd: [38, 26], s: [40, 32], h: [48, 44], a: [32, 58], l: [[34, 50, 32, 62], [62, 56, 74, 62]] },
+  plank: { hd: [18, 38], s: [22, 40], h: [58, 46], a: [22, 60], l: [[78, 54, 92, 62]] },
+  pdown: { hd: [18, 50], s: [22, 52], h: [58, 56], a: [22, 62], l: [[78, 59, 92, 62]] },
+  ash: { hd: [30, 52], s: [34, 54], h: [60, 56], a: [34, 62], l: [[48, 60, 50, 62]] },
+  cobra: { hd: [26, 34], s: [32, 46], h: [56, 58], a: [36, 62], l: [[76, 60, 92, 62]] },
+  dog: { hd: [32, 40], s: [36, 36], h: [52, 14], a: [24, 62], l: [[67, 38, 82, 62]] },
+  squat: { hd: [46, 12], s: [46, 22], h: [36, 44], a: [60, 30], l: [[56, 46, 50, 62]] },
+  catcow: { hd: [24, 34], s: [32, 36], h: [64, 34], a: [32, 60], l: [[64, 48, 64, 60]] },
+  wallsit: { hd: [26, 16], s: [26, 26], h: [26, 44], a: [36, 36], l: [[46, 44, 46, 62]] }
+};
+function fig(p) {
+  const o = PO[p] || PO.stand, L = (a, b) => `<line x1="${a[0]}" y1="${a[1]}" x2="${b[0]}" y2="${b[1]}"/>`;
+  return `<svg viewBox="0 0 100 66" style="width:100%;max-height:200px;background:#050b17;border-radius:8px" stroke="#00e5ff" stroke-width="3" stroke-linecap="round" fill="none"><line x1="4" y1="63" x2="96" y2="63" stroke="#1d3354" stroke-width="1"/>${L(o.hd, o.s)}<circle cx="${o.hd[0]}" cy="${o.hd[1]}" r="5"/>${L(o.s, o.h)}${L(o.s, o.a)}${o.l.map(q => L(o.h, [q[0], q[1]]) + L([q[0], q[1]], [q[2], q[3]])).join('')}</svg>`;
+}
+const SN = [
+  ['Pranamasana (prayer pose)', 'Stand tall with palms together at your chest. Breathe normally.', 'stand'],
+  ['Hasta Uttanasana (raised arms)', 'Breathe in. Raise your arms overhead and arch back gently.', 'arms'],
+  ['Hastapadasana (forward fold)', 'Breathe out. Bend forward from the hips and bring hands toward the floor.', 'fold'],
+  ['Ashwa Sanchalanasana (lunge)', 'Breathe in. Step your right leg back, lower the knee and look up.', 'lunge'],
+  ['Plank', 'Hold your breath. Step the other leg back so your body is in a straight line.', 'plank'],
+  ['Ashtanga Namaskara (eight points)', 'Breathe out. Lower your knees, chest and chin to the floor.', 'ash'],
+  ['Bhujangasana (cobra)', 'Breathe in. Slide forward and lift your chest, elbows slightly bent.', 'cobra'],
+  ['Adho Mukha Svanasana (downward dog)', 'Breathe out. Lift your hips high into an upside-down V.', 'dog'],
+  ['Ashwa Sanchalanasana (lunge)', 'Breathe in. Step your right foot forward between your hands.', 'lunge'],
+  ['Hastapadasana (forward fold)', 'Breathe out. Bring the left foot forward and fold down.', 'fold'],
+  ['Hasta Uttanasana (raised arms)', 'Breathe in. Rise up with arms overhead.', 'arms'],
+  ['Pranamasana (prayer pose)', 'Breathe out. Return to prayer pose. Repeat with the left leg.', 'stand']
+];
+const TUT = {
+  surya: { n: 'Surya Namaskar', s: SN.map(x => ({ t: '<b>' + x[0] + '</b><br>' + x[1], p: x[2] })) },
+  'cat-cow': { n: 'Cat-Cow Spine Relief', s: [{ t: 'Start on hands and knees with wrists under shoulders and knees under hips.', p: 'catcow' }, { t: 'Inhale, drop belly gently and lift chest; exhale, round upper back slowly.', p: 'catcow' }] },
+  'wall sit': { n: 'Supported Wall Sit', s: [{ t: 'Slide your back down a wall until thighs are comfortable (45°–90°).', p: 'wallsit' }, { t: 'Keep knees over ankles and breathe steadily.', p: 'wallsit' }] },
+  pelvic: { n: 'Pelvic Tilts & Kegels', s: [{ t: 'Stand with back softly against a wall or kneel on all fours.', p: 'catcow' }, { t: 'Exhale and gently draw lower belly & pelvic floor upward for 5s; release on inhale.', p: 'stand' }] },
+  dand: { n: 'Dand (Hindu push-up)', s: [{ t: 'Start in downward dog: hips high, hands and feet on floor.', p: 'dog' }, { t: 'Swoop forward and down, chest skimming floor.', p: 'ash' }, { t: 'Push up into cobra with chest forward.', p: 'cobra' }] },
+  baithak: { n: 'Baithak (Hindu squat)', s: [{ t: 'Stand with feet shoulder-width apart and arms out.', p: 'stand' }, { t: 'Sit back and down keeping chest tall.', p: 'squat' }, { t: 'Press through feet to stand tall.', p: 'stand' }] },
+  'push-up': { n: 'Push-up', s: [{ t: 'Hands under shoulders, body straight.', p: 'plank' }, { t: 'Lower chest toward floor or wall with elbows at 45°.', p: 'pdown' }, { t: 'Press back to start.', p: 'plank' }] },
+  squat: { n: 'Squat', s: [{ t: 'Feet shoulder-width apart, chest up.', p: 'stand' }, { t: 'Push hips back and bend knees as if sitting on a chair.', p: 'squat' }, { t: 'Press through heels to stand.', p: 'stand' }] },
+  lunge: { n: 'Lunge', s: [{ t: 'Step one leg back and lower until both knees bend ~90°.', p: 'lunge' }, { t: 'Push through front foot to return.', p: 'stand' }] },
+  plank: { n: 'Plank', s: [{ t: 'Forearms or hands under shoulders, body straight.', p: 'plank' }, { t: 'Brace core gently and breathe normally.', p: 'plank' }] }
+};
+function tut(x) {
+  const k = Object.keys(TUT).find(k => x.toLowerCase().includes(k));
+  if (!k) { toast('Form tip: Control the eccentric lowering phase (2s) and exhale as you push/pull.'); return; }
+  tv(k, 0);
+}
+const ts = () => tv('surya', 0);
+function tv(k, i) {
+  const T = TUT[k], s = T.s[i];
+  modal(`<div class="mu">${T.n} · Step ${i + 1} of ${T.s.length}</div>${fig(s.p)}<div style="font-size:15px;margin:8px 0">${s.t}</div>${B(i + 1, T.s.length)}<div class="row" style="margin-top:10px"><button ${i ? '' : 'disabled'} onclick="tv('${k}',${i - 1})">Back</button>${i < T.s.length - 1 ? `<button class="p" onclick="tv('${k}',${i + 1})">Next</button>` : '<button class="p" onclick="closeM()">Done</button>'}</div>`);
+}
+
+/* ============================================================================
+   5. ANTI-CHEAT AUTO-COMPLETING QUESTS & 7-DAY 1-ON-1 XP DUELS
+============================================================================ */
+const BN = [
+  ['Bonus: 2-minute full-body stretch', 'Reach overhead 30s · Gentle forward bend 30s · Shoulder rolls 30s · Easy spine twist 30s'],
+  ['Bonus: 20 bodyweight squats anytime today', 'Feet shoulder-width apart · Sit back slowly · Complete 20 controlled reps'],
+  ['Bonus: 5-minute post-meal walk', 'Finish eating · Walk slowly for 5 minutes to blunt blood sugar spikes'],
+  ['Bonus: 1-minute core & breath reset', 'Tall posture · 6 slow nasal breaths · Gentle core brace']
+];
+const SPC = () => S.cal[today()];
+const SPN = { h: 'holiday', t: 'travel day', b: 'busy day' };
+let CM = 0;
+
+function Q() {
+  const c = calc();
+  const dl = n => (n / c.def).toFixed(1);
+  const sp = SPC();
+  const mat = isMaternal();
+  const b = BN[new Date().getDate() % 4];
+  const stepGoal = mat ? 6000 : 8000;
+
+  const base = [
+    {
+      id: 'w',
+      auto: !sp,
+      t: sp ? `Light 10-min walk (${SPN[sp]})` : `Complete Day ${dayNo()} Workout (all sets)`,
+      xp: sp ? 20 : 40,
+      st: 'STR',
+      r: mat ? 'Improves maternal circulation, eases back tension, and supports healthy blood sugar.' : 'Triggers muscle protein synthesis for 24–48 h and raises fat oxidation.',
+      l: mat ? 'Higher stiffness and lower energy today.' : `Unrealized MPS and slower metabolic rate. Goal delayed ≈ ${dl(300)} day.`
+    },
+    {
+      id: 'p',
+      auto: true,
+      t: `Hit protein target (${c.pr} g)`,
+      xp: 30,
+      st: 'VIT',
+      r: mat ? 'Provides essential amino acids for tissue repair and maternal/baby nourishment.' : 'Protects lean muscle in a deficit and increases fullness.',
+      l: mat ? 'Lower satiety and slower tissue recovery.' : `Lean tissue loss risk and ghrelin hunger rebound. Goal delayed ≈ ${dl(150)} day.`
+    },
+    {
+      id: 'c',
+      auto: true,
+      t: mat ? `Nourish around ${c.t} kcal` : `Stay within ${c.t} kcal (log ≥ 800 kcal)`,
+      xp: 30,
+      st: 'INT',
+      r: mat ? 'Delivers steady gestational/postpartum energy, iron, folate, and calcium.' : 'Maintains your safe deficit and improves GLUT4 insulin sensitivity.',
+      l: mat ? 'Energy dips and micronutrient shortfall.' : `Surplus erases today's deficit. Goal delayed ≈ ${dl(400)} day.`
+    },
+    {
+      id: 'h',
+      auto: true,
+      t: 'Drink 3.0 litres of water',
+      xp: 15,
+      st: 'VIT',
+      r: 'Supports blood volume, digestion, satiety, and recovery.',
+      l: 'Dehydration causes fatigue and mimics hunger.'
+    },
+    {
+      id: 's',
+      auto: true,
+      t: `Walk ${stepGoal.toLocaleString()} steps`,
+      xp: 20,
+      st: 'AGI',
+      r: 'Adds ~220 kcal of low-stress daily NEAT movement.',
+      l: mat ? 'Missed gentle circulation boost.' : `Missed NEAT ≈ ${dl(250)} day of progress.`
+    },
+    {
+      id: 'z',
+      auto: true,
+      t: 'Sleep / rest 7+ hours',
+      xp: 15,
+      st: 'SEN',
+      r: 'Lowers cortisol, balances appetite hormones, and restores nervous system.',
+      l: 'Elevated cortisol and stronger sugar cravings tomorrow.'
+    },
+    {
+      id: 'b',
+      auto: false,
+      t: b[0],
+      xp: 25,
+      st: 'AGI',
+      r: 'Optional bonus XP and mobility boost.',
+      l: 'Optional — zero penalty if skipped.'
+    }
+  ];
+
+  if (!mat) {
+    base.push({
+      id: 'sn',
+      auto: false,
+      t: 'Bonus: 3 rounds of Surya Namaskar',
+      xp: 40,
+      st: 'AGI',
+      r: 'Mobilizes all major joints, warms the spine, and burns extra calories.',
+      l: 'Optional — zero penalty if skipped.'
+    });
+  }
+
+  const extras = (S.extraQuests || []).filter(x => x.d === today());
+  return base.concat(extras);
+}
+
+// Strict Anti-Cheat Verifier: automatically awards or revokes XP based on real logged numbers
+function verifyAntiCheatQuests(silent = false) {
+  const d = today();
+  S.done[d] = S.done[d] || {};
+  const c = calc();
+  const T = tot();
+  const wLitres = +((S.water || {})[d] || 0);
+  const watch = S.watch || {};
+  const stepGoal = isMaternal() ? 6000 : 8000;
+  const dayProg = S.prog[dayNo()] || {};
+  const workoutDone = !!dayProg.x;
+
+  const checks = {
+    w: workoutDone,
+    p: T.p >= c.pr * 0.95,
+    c: isMaternal() ? (T.k >= c.t * 0.85 && T.k <= c.t * 1.2) : (T.k >= 800 && T.k <= c.t * 1.05),
+    h: wLitres >= 3.0,
+    s: (watch.steps || 0) >= stepGoal,
+    z: (watch.sleep || 0) >= 7
+  };
+
+  let changed = false;
+  for (const [qid, met] of Object.entries(checks)) {
+    const q = Q().find(x => x.id === qid);
+    if (!q || !q.auto) continue;
+    const wasDone = !!S.done[d][qid];
+    if (met && !wasDone) {
+      S.done[d][qid] = 1;
+      addXp(q.xp);
+      S.stats[q.st] = (S.stats[q.st] || 10) + 1;
+      changed = true;
+      if (!silent) {
+        snd(700);
+        toast(`✅ Verified & Auto-Completed: ${q.t} (+${q.xp} XP)`);
+      }
+    } else if (!met && wasDone) {
+      delete S.done[d][qid];
+      S.xp = Math.max(0, S.xp - q.xp);
+      S.stats[q.st] = Math.max(1, (S.stats[q.st] || 10) - 1);
+      changed = true;
+    }
+  }
+  if (changed) save();
+}
+
+function logWater(delta) {
+  const d = today();
+  S.water = S.water || {};
+  S.water[d] = Math.max(0, +(((S.water[d] || 0) + delta).toFixed(2)));
+  snd(540);
+  verifyAntiCheatQuests(false);
+  save();
+  R();
+}
+
+function tq(id) {
+  const d = today(), q = Q().find(x => x.id === id);
+  if (!q) return;
+  if (q.auto) {
+    toast('Anti-Cheat Active: Log real numbers in Program, Body, or Sync to auto-complete this quest!', 1);
+    return;
+  }
+  S.done[d] = S.done[d] || {};
+  const prevCount = Object.keys(S.done[d]).length;
+  if (S.done[d][id]) {
+    delete S.done[d][id];
+    S.xp = Math.max(0, S.xp - q.xp);
+    S.stats[q.st] = Math.max(1, (S.stats[q.st] || 10) - 1);
+  } else {
+    S.done[d][id] = 1;
+    addXp(q.xp);
+    S.stats[q.st] = (S.stats[q.st] || 10) + 1;
+    snd(660);
+    const newCount = Object.keys(S.done[d]).length;
+    if (prevCount < 3 && newCount >= 3 && !streakLockedToday) {
+      streakLockedToday = true;
+      toast(`🔥 Streak Locked In! (${S.streak}d safe) +${q.xp} XP`);
+    } else {
+      toast('Quest complete +' + q.xp + ' XP');
+    }
+  }
+  save();
+  R();
+}
+
+function qd(id) {
+  const q = Q().find(x => x.id === id);
+  if (!q) return;
+  const dn = (S.done[today()] || {})[id], c = calc(), T = tot(), sp = SPC();
+  const wLitres = +((S.water || {})[today()] || 0);
+  const watch = S.watch || {};
+
+  let actionBlock = '';
+  if (id === 'w' && !sp) {
+    actionBlock = `<div class="mu" style="margin-bottom:8px">Anti-Cheat Verified: Complete all sets in your Program tab to auto-complete this quest.</div><button class="p" style="width:100%" onclick="tab=1;closeM();R()">Open Day ${dayNo()} Workout Sets →</button>`;
+  } else if (id === 'p' || id === 'c') {
+    actionBlock = `<div class="mu" style="margin-bottom:8px">Logged today: <b>${Math.round(T.k)} / ${c.t} kcal</b> · <b>${Math.round(T.p)} / ${c.pr} g protein</b>. Auto-completes when targets are logged in Body.</div><button class="p" style="width:100%" onclick="tab=2;closeM();R()">Open Body &amp; Meal Logger →</button>`;
+  } else if (id === 'h') {
+    actionBlock = `<div class="mu" style="margin-bottom:8px">Water logged today: <b>${wLitres.toFixed(2)} / 3.00 L</b></div><div class="row"><button class="e" onclick="logWater(0.25);qd('h')">+250 ml</button><button class="e" onclick="logWater(0.5);qd('h')">+500 ml</button><button class="p" onclick="logWater(1);qd('h')">+1.0 L</button></div>`;
+  } else if (id === 's' || id === 'z') {
+    actionBlock = `<div class="mu" style="margin-bottom:8px">Synced today: <b>${(watch.steps || 0).toLocaleString()} steps</b> · <b>${watch.sleep || 0} hrs sleep</b>.</div><div class="row"><input id="q_st" type="number" placeholder="Steps" value="${watch.steps || ''}" style="flex:1"><input id="q_sl" type="number" step=".1" placeholder="Sleep hrs" value="${watch.sleep || ''}" style="flex:1"><button class="p" onclick="S.watch={steps:+$('#q_st').value||0,sleep:+$('#q_sl').value||0};verifyAntiCheatQuests(false);save();qd('${id}')">Sync</button></div>`;
+  } else {
+    actionBlock = dn
+      ? `<button onclick="tq('${id}');qd('${id}')">Undo</button>`
+      : `<button class="p" style="width:100%;padding:11px" onclick="tq('${id}');closeM()">Mark Complete ✓</button>`;
+  }
+
+  modal(`<div class="mu">${q.auto ? '🔒 ANTI-CHEAT AUTO-QUEST' : 'QUEST'} · +${q.xp} XP</div><h3 class="o" style="margin:4px 0 10px">${esc(q.t)}</h3>${actionBlock}<div class="sci"><b class="g">Physiological Reward:</b> ${esc(q.r)}<br><b class="r">Lost Potential if Skipped:</b> ${esc(q.l)}</div><div class="row" style="margin-top:12px">${id === 'sn' ? '<button class="e" onclick="ts()">Watch 12-Pose Tutorial</button>' : ''}<button onclick="closeM()">Close</button></div>`);
+}
+
+function brief() {
+  S.brief = today();
+  save();
+  const qs = Q(), d = S.done[today()] || {};
+  modal(`<div class="mu">${new Date().toDateString()}${isFemale() && activeFStage() !== 'std' ? ' · ' + esc(fStageLabel()) : ''}</div><h3 class="o" style="margin:4px 0">Daily Mission Briefing</h3>${qs.map(q => `<div class="c ${d[q.id] ? 'ok' : ''}" style="margin:6px 0"><div class="row"><span class="t">${esc(q.t)}<br><span class="mu">+${q.xp} XP ${q.auto ? '· Auto-verified' : ''}</span></span><button class="${d[q.id] ? 'e' : 'p'}" onclick="qd('${q.id}')">${d[q.id] ? 'Done ✓' : 'Open'}</button></div></div>`).join('')}<button class="p" style="width:100%" onclick="closeM()">Enter THE SYSTEM</button>`);
+}
+
+// 7-Day 1-on-1 XP Duels
+function challengeDuel() {
+  const em = ($('#duel_em').value || '').trim();
+  if (!em || !em.includes('@')) { toast('Enter a valid friend email.', 1); return; }
+  S.duels = S.duels || [];
+  S.duels.unshift({ id: 'd_' + Date.now(), opp: em, myStartXp: S.xp, oppGain: 0, ends: 'In 7 days', active: true });
+  $('#duel_em').value = '';
+  save();
+  snd(750);
+  toast('7-Day XP Duel challenge sent to ' + em + '!');
+  R();
+}
+
+/* ============================================================================
+   6. NUTRITION, NATURAL-LANGUAGE PARSER, COMBOS, GROCERY LIST & BODY MEAS
+============================================================================ */
+const F = [
+  ['Whole wheat roti', 104, 3, 18, 2, 'Pantry & Dals', 4],
+  ['Soya chunks (30 g)', 104, 15, 10, 0, 'Dairy & Protein', 8],
+  ['Low-fat paneer (100 g)', 200, 20, 4, 11, 'Dairy & Protein', 38],
+  ['Moong dal (1 cup)', 212, 14, 38, 1, 'Pantry & Dals', 14],
+  ['Curd / dahi (1 cup)', 98, 11, 8, 4, 'Dairy & Protein', 15],
+  ['Sprouts (1 cup)', 100, 9, 18, 1, 'Sabzi Mandi', 10],
+  ['Besan chilla', 120, 6, 14, 4, 'Pantry & Dals', 12],
+  ['Boiled egg', 78, 6, 1, 5, 'Dairy & Protein', 8],
+  ['Chicken breast (100 g)', 165, 31, 0, 4, 'Dairy & Protein', 35],
+  ['Poha (1 cup)', 180, 3, 34, 4, 'Pantry & Dals', 10],
+  ['Idli', 58, 2, 12, 0, 'Pantry & Dals', 8],
+  ['Oats (40 g)', 150, 5, 27, 3, 'Pantry & Dals', 10],
+  ['Cooked rice (1 cup)', 205, 4, 45, 0, 'Pantry & Dals', 8],
+  ['Almonds (10)', 70, 3, 3, 6, 'Pantry & Dals', 12],
+  ['Whey scoop', 120, 24, 3, 2, 'Dairy & Protein', 55],
+  ['Rajma (1 cup)', 225, 15, 40, 1, 'Pantry & Dals', 16],
+  ['Chole (1 cup)', 270, 14, 45, 4, 'Pantry & Dals', 16],
+  ['Dosa', 133, 3, 22, 4, 'Pantry & Dals', 12],
+  ['Banana', 105, 1, 27, 0, 'Sabzi Mandi', 6],
+  ['Milk (1 glass)', 150, 8, 12, 8, 'Dairy & Protein', 14],
+  ['Peanuts (30 g)', 170, 7, 5, 14, 'Pantry & Dals', 7],
+  ['Tofu (100 g)', 76, 8, 2, 5, 'Dairy & Protein', 25],
+  ['Upma (1 cup)', 190, 5, 30, 6, 'Pantry & Dals', 12],
+  ['Palak / Spinach sabzi (1 cup)', 110, 4, 10, 5, 'Sabzi Mandi', 12],
+  ['Ragi roti', 115, 3, 22, 2, 'Pantry & Dals', 6]
+];
+
+const RC = [
+  ['Masala egg bhurji', 28, [234, 18, 3, 15], 'Eggs, onion, tomato, chilli, turmeric', 'Chop onion/tomato · Sauté with spices 3 min · Scramble in 3 eggs', 'Eggetarian'],
+  ['Soya chunk pulao', 35, [420, 24, 55, 8], 'Soya chunks, rice, peas, spices', 'Soak soya 5 min · Fry spices + peas · Add rice & water; cook 2 whistles', 'Veg'],
+  ['Moong dal chilla x2', 20, [240, 14, 32, 6], 'Moong flour, onion, coriander', 'Mix batter with water · Pour on tawa · Cook both sides 2 min', 'Veg'],
+  ['Curd sprout chaat', 25, [210, 17, 26, 5], 'Curd, sprouts, onion, chaat masala', 'Mix sprouts + curd · Add onion, lemon · Season and eat', 'Veg'],
+  ['Paneer bhurji', 58, [320, 22, 8, 22], 'Low-fat paneer, onion, tomato', 'Crumble paneer · Sauté onion-tomato masala · Add paneer, cook 3 min', 'Veg'],
+  ['Palak Dal & Ragi Roti (Iron/Folate)', 32, [340, 16, 48, 7], 'Spinach, moong dal, ragi flour, lemon', 'Simmer spinach & dal · Squeeze fresh lemon for iron absorption · Serve with ragi roti', 'Female']
+];
+
+const tot = () => {
+  const l = S.log[today()] || [];
+  return l.reduce((a, x) => ({ k: a.k + x.k, p: a.p + x.p, c: a.c + x.c, f: a.f + x.f }), { k: 0, p: 0, c: 0, f: 0 });
+};
+
+function logF(n, k, p, c, f, q = 1) {
+  const d = today();
+  S.log[d] = S.log[d] || [];
+  S.rec = [[n, k, p, c, f], ...(S.rec || []).filter(x => x[0] !== n)].slice(0, 6);
+  const label = q !== 1 ? `${q}× ${n}` : n;
+  S.log[d].push({ n: label, k: +(k * q).toFixed(0), p: +(p * q).toFixed(1), c: +(c * q).toFixed(1), f: +(f * q).toFixed(1), q });
+  verifyAntiCheatQuests(false);
+  save();
+  R();
+  snd(500);
+}
+
+function parseMultiMeal(raw) {
+  const parts = raw.split(/\+|,|and/i).map(s => s.trim()).filter(Boolean);
+  let logged = 0;
+  for (const part of parts) {
+    const m = part.match(/^(\d+(?:\.\d+)?)\s*(?:x|×)?\s*(.+)$/i);
+    const qty = m ? parseFloat(m[1]) : 1;
+    const term = (m ? m[2] : part).toLowerCase();
+    const hit = F.find(f => f[0].toLowerCase().includes(term) || term.split(' ').some(w => w.length > 2 && f[0].toLowerCase().includes(w)));
+    if (hit) {
+      logF(hit[0], hit[1], hit[2], hit[3], hit[4], qty);
+      logged++;
+    }
+  }
+  if (logged > 0) {
+    toast(`Logged ${logged} item${logged > 1 ? 's' : ''} in 1 tap!`);
+    const inp = $('#fs');
+    if (inp) inp.value = '';
+    R();
+  } else {
+    toast('No matching food found. Try e.g. "2 roti + 1 dal + 1 curd"', 1);
+  }
+}
+
+function saveCombo() {
+  const items = S.log[today()] || [];
+  if (!items.length) { toast('Log at least one food first to save a combo.', 1); return; }
+  modal(`<h3 class="o">Save Meal Combo</h3><input id="cbn" placeholder="Combo name (e.g. My Power Lunch)" maxlength="36"><div class="row" style="margin-top:10px"><button class="p" onclick="scb()">Save</button><button onclick="closeM()">Cancel</button></div>`);
+}
+function scb() {
+  const n = ($('#cbn').value || '').trim();
+  if (!n) return;
+  const items = (S.log[today()] || []).map(x => [x.n.replace(/^\d+(?:\.\d+)?×\s*/, ''), x.q || 1, x.k / (x.q || 1), x.p / (x.q || 1), x.c / (x.q || 1), x.f / (x.q || 1)]);
+  S.combos = S.combos || [];
+  S.combos.unshift({ n, raw: items });
+  save();
+  closeM();
+  R();
+  toast('Combo saved: ' + n);
+}
+function logCombo(idx) {
+  const cb = (S.combos || [])[idx];
+  if (!cb) return;
+  if (cb.items) {
+    cb.items.forEach(([name, qty]) => {
+      const hit = F.find(f => f[0] === name);
+      if (hit) logF(hit[0], hit[1], hit[2], hit[3], hit[4], qty);
+    });
+  } else if (cb.raw) {
+    cb.raw.forEach(([name, qty, k, p, c, f]) => logF(name, k, p, c, f, qty));
+  }
+  toast('Logged combo: ' + cb.n);
+}
+
+function openGroceryModal() {
+  const diet = S.p.diet || 'Indian High-Protein Veg';
+  const isVeg = !/Omnivore/i.test(diet);
+  const items = [
+    { cat: 'Sabzi Mandi (Fresh Produce)', list: [
+      ['Spinach (Palak) — 2 bunches', 40],
+      ['Onions & Tomatoes — 2 kg total', 90],
+      ['Bananas — 1 dozen', 60],
+      ['Fresh Coriander, Ginger & Lemons', 45],
+      ['Sprouts (Moong & Kala Chana) — 500 g', 65]
+    ]},
+    { cat: 'Dairy & High-Protein Staples', list: [
+      ['Curd / Dahi — 1.5 kg', 110],
+      ['Low-Fat Paneer — 600 g', 230],
+      ['Soya Chunks — 500 g pack', 85],
+      isVeg ? ['Tofu — 400 g', 110] : ['Eggs (1 tray / 30) or Chicken Breast (1 kg)', 240]
+    ]},
+    { cat: 'Kirana Pantry & Dals', list: [
+      ['Whole Wheat Atta / Ragi Flour — 2 kg', 110],
+      ['Yellow Moong Dal — 1 kg', 135],
+      ['Rajma / Kabuli Chana — 500 g', 85],
+      ['Rolled Oats & Poha — 1 kg total', 120],
+      ['Roasted Peanuts / Almonds — 250 g', 140]
+    ]}
+  ];
+  const totalINR = items.reduce((sum, g) => sum + g.list.reduce((s, x) => s + x[1], 0), 0);
+  const waText = encodeURIComponent(`THE SYSTEM — 7-Day Grocery List (${diet}, Est. ₹${totalINR}):\n` + items.map(g => `\n*${g.cat}*\n` + g.list.map(x => `• ${x[0]} (~₹${x[1]})`).join('\n')).join('\n'));
+  modal(`<div class="row"><h3 class="o" style="margin:0">7-Day Kirana &amp; Sabzi List</h3><span class="tag a">Est. ₹${totalINR}/wk</span></div><div class="mu" style="margin:4px 0 8px">Tailored to <b>${esc(diet)}</b> (${calc().pr}g protein/day target).</div>${items.map(g => `<div class="c" style="margin:8px 0"><b style="color:var(--cy);font-size:12px">${g.cat}</b>${g.list.map(([nm, cost]) => {
+    const checked = (S.grocDone || {})[nm];
+    return `<label style="color:var(--tx);font-size:13px;margin:6px 0"><input type="checkbox" style="width:auto" ${checked ? 'checked' : ''} onchange="S.grocDone=S.grocDone||{};S.grocDone['${esc(nm)}']=this.checked?1:0;save()"> ${esc(nm)} <span class="mu">(~₹${cost})</span></label>`;
+  }).join('')}</div>`).join('')}<div class="row"><a href="https://wa.me/?text=${waText}" target="_blank" rel="noopener" style="background:var(--em);color:#001018;padding:9px 12px;border-radius:6px;font:700 12px Inter;text-decoration:none">Share to WhatsApp</a><button onclick="closeM()">Close</button></div>`);
+}
+
+function calcBodyFat() {
+  const m = (S.meas || [])[S.meas.length - 1];
+  if (!m || !m.waist || !m.neck) return null;
+  const h = +S.p.h, w = +S.p.w, isMale = S.p.sex === 'm';
+  let bf;
+  if (isMale) {
+    if (m.waist <= m.neck) return null;
+    bf = 495 / (1.0324 - 0.19077 * Math.log10(m.waist - m.neck) + 0.15456 * Math.log10(h)) - 450;
+  } else {
+    const hip = m.hip || m.waist + 14;
+    if ((m.waist + hip) <= m.neck) return null;
+    bf = 495 / (1.29579 - 0.35004 * Math.log10(m.waist + hip - m.neck) + 0.22100 * Math.log10(h)) - 450;
+  }
+  bf = Math.max(4, Math.min(60, bf));
+  const leanKg = w * (1 - bf / 100);
+  return { bf: bf.toFixed(1), lean: leanKg.toFixed(1), waist: m.waist };
+}
+
+/* ============================================================================
+   7. VIEWS: QUESTS, PROGRAM (SETS x REPS x KG), BODY, FEED, CALENDAR, PROFILE & ADMIN
+============================================================================ */
+const B = (v, m, cls = '') => `<div class="bar ${cls}"><i style="width:${Math.min(100, m ? v / m * 100 : 0)}%"></i></div>`;
+
+function hud() {
+  const L = lv();
+  const ev = S.b2b?.globalEvent;
+  $('#hud').innerHTML = `<div class="hr"><div class="rk"><span>${rank(L.l)}</span></div><div style="flex:1;min-width:140px"><div class="o" role="button" tabindex="0" style="font-size:13px;cursor:pointer" onclick="tab=5;R()">${esc(S.p.name)} ▸ <span class="mu">· ${esc(S.p.title)}</span> ${S.acct?.isAdmin ? '<span class="tag a">ADMIN</span>' : ''}</div><div class="mu">Lv ${L.l} · ${L.x}/${L.n} XP · 🔥 ${S.streak}d ${(S.freeze || 0) > 0 ? '· ❄️' + S.freeze : ''}</div>${B(L.x, L.n)}</div><div style="text-align:right"><div class="mu">Day ends in</div><div class="o" id="cd" style="color:var(--cr)">--:--:--</div></div><button onclick="S.mute=!S.mute;save();R()" aria-label="Toggle Sound">${S.mute ? '🔇' : '🔊'}</button></div>${ev && ev.active ? `<div class="mu" style="margin-top:5px;padding-top:4px;border-top:1px solid #12203a;display:flex;justify-content:space-between;gap:8px"><span>⚡ <b style="color:var(--am)">${esc(ev.title)}</b>: ${esc(ev.desc)}</span></div>` : ''}`;
+}
+
+setInterval(() => {
+  const n = new Date(), m = new Date(n);
+  m.setHours(24, 0, 0, 0);
+  const s = Math.floor((m - n) / 1e3), e = $('#cd');
+  if (e) e.textContent = [s / 3600 | 0, s % 3600 / 60 | 0, s % 60].map(x => String(x).padStart(2, '0')).join(':');
+}, 1000);
+
+const TABS = ['🎯<br>Quests', '🏋️<br>Program', '💪<br>Body', '📸<br>Feed', '📅<br>Calendar'];
+function nav() {
+  $('#nav').innerHTML = TABS.map((t, i) => `<button class="${i === tab ? 'on' : ''}" onclick="tab=${i};R()">${t}</button>`).join('');
+}
+
+function vQ() {
+  const d = S.done[today()] || {}, qs = Q(), n = Object.keys(d).length, L = lv();
+  const wLitres = +((S.water || {})[today()] || 0);
+  const duels = (S.duels || []).filter(x => x.active);
+
+  return `${isMaternal() ? `<div class="c fm"><div class="row"><b>🌸 Maternal Safety Shield Active</b><span class="tag f">${esc(fStageLabel())}</span></div><div class="mu" style="margin-top:4px">${esc(calc().modeNote)}. High-impact and supine movements are automatically replaced.</div></div>` : ''}` +
+    `<div class="c s"><div class="row"><h3 style="margin:0">Daily Quests</h3><span class="mu">${n} of ${qs.length} done</span></div>${B(n, qs.length, 'g')}<div class="mu" style="margin-top:6px">Water, steps, sleep, protein, calories &amp; workouts auto-complete strictly when real numbers are logged. Complete 3+ quests daily to lock in your 🔥 streak.</div><div class="row" style="margin-top:8px"><span class="mu">💧 Water today: <b>${wLitres.toFixed(2)} / 3.00 L</b></span><span><button class="e" style="min-height:30px;padding:4px 8px" onclick="logWater(0.25)">+250 ml</button> <button class="p" style="min-height:30px;padding:4px 8px" onclick="logWater(0.5)">+500 ml</button></span></div></div>` +
+    qs.map(q => `<div class="c ${d[q.id] ? 'ok' : ''}"><div class="row"><div><div class="t">${esc(q.t)}</div><div class="mu">+${q.xp} XP · ${q.st} ${q.auto ? '· 🔒 Auto-verified' : ''}</div></div><button class="${d[q.id] ? 'e' : 'p'}" onclick="qd('${q.id}')">${d[q.id] ? 'Done ✓' : 'Open'}</button></div><details><summary>Why? (Physiological Reward vs Lost Potential)</summary><div class="sci"><b class="g">Reward:</b> ${esc(q.r)}<br><b class="r">Lost Potential:</b> ${esc(q.l)}</div></details></div>`).join('') +
+    `<div class="c w"><div class="row"><h3 style="margin:0;color:#d8b4fe">⚔️ 7-Day 1-on-1 XP Duels</h3><span class="tag v">PvP</span></div><div class="mu" style="margin:4px 0 8px">Challenge any friend by email to a 7-day head-to-head XP race.</div><div class="row"><input id="duel_em" type="email" placeholder="friend@email.com" style="flex:1"><button class="v" onclick="challengeDuel()">Challenge</button></div>${duels.map(dl => {
+      const myGain = Math.max(0, S.xp - (dl.myStartXp || 0));
+      const oppGain = dl.oppGain || 0;
+      const ahead = myGain >= oppGain;
+      return `<div class="sci" style="margin-top:8px"><div class="row"><b>You vs ${esc(dl.opp)}</b><span class="tag ${ahead ? '' : 'a'}">${ahead ? 'WINNING' : 'BEHIND'} · ${esc(dl.ends)}</span></div><div class="mu" style="margin:4px 0">Your XP gained: <b>+${myGain} XP</b> vs Opponent: <b>+${oppGain} XP</b></div>${B(myGain + 10, myGain + oppGain + 20, ahead ? 'g' : 'p')}</div>`;
+    }).join('')}</div>` + vPhoto();
+}
+
+function vPhoto() {
+  const M = [1, 7, 15, 21, 30], ph = S.ph || {};
+  return `<div class="c"><h3 style="margin:0 0 6px">30-Day Photo Bonus Quest</h3><div class="grid">${M.map(m => {
+    const imgUrl = MEDIA_CACHE['photo_' + m];
+    return `<div class="c ${ph[m] ? 'ok' : ''}" style="margin:0;text-align:center"><div class="o">Day ${m}</div>${imgUrl ? `<img src="${imgUrl}" style="width:100%;border-radius:6px;margin:4px 0;max-height:110px;object-fit:cover">` : ''}<button onclick="phq(${m})">${ph[m] ? 'Logged ✓' : 'Check in'}</button></div>`;
+  }).join('')}</div><div class="mu" style="margin-top:6px">Stored safely in IndexedDB. +25 XP per milestone; complete all 5 to unlock Transformation Monarch.</div></div>`;
+}
+
+// Program Tab: Recommended Weight + Thumb-Friendly Sets x Reps x kg Tracker + PR Badges + Shuffle
+function vP() {
+  const N = S.p.days, t = dayNo(), cur = S.wt.length ? S.wt[S.wt.length - 1].w : S.p.w;
+  const pc = gp(), bf = calcBodyFat();
+  const restRem = REST_END ? Math.max(0, Math.ceil((REST_END - Date.now()) / 1000)) : 0;
+
+  let h = `${restRem > 0 ? `<div class="rtmr"><span>⏱️ <b>Rest Timer:</b> <b id="rest_cd" class="o" style="color:var(--cy)">${restRem}s</b> <span class="mu">(recover before next set)</span></span><span><button style="padding:3px 8px;min-height:28px;font-size:11px" onclick="startRestTimer(${restRem + 15})">+15s</button> <button class="x" style="padding:3px 8px;min-height:28px;font-size:11px" onclick="stopRestTimer()">Skip</button></span></div>` : ''}` +
+    `<div class="c s"><div class="row"><h3 style="margin:0">Roadmap · Day ${t}/${N}</h3><span class="mu">${isMaternal() ? esc(fStageLabel()) : `${cur} kg → ${S.p.tw} kg (${pc}%)`}</span></div>${B(pc, 100, 'g')}<div class="grid" style="margin-top:8px"><input id="wi" type="number" step=".1" placeholder="Weight (${cur} kg)"><input id="mw" type="number" step=".1" placeholder="Waist (cm)"><input id="mn" type="number" step=".1" placeholder="Neck (cm)"><input id="mh" type="number" step=".1" placeholder="Hip (cm, opt)"></div><div class="row" style="margin-top:8px"><button class="e" onclick="logBodyMetrics()">Log Weight &amp; Measurements</button><button onclick="shuffleWorkout(${t})">🔀 Shuffle Day ${t}</button><button class="v" onclick="shareClientSummaryCard()">📋 Client Card</button></div>${bf ? `<div class="mu" style="margin-top:6px">NSV Body Composition: <b>~${bf.bf}% Body Fat</b> · <b>${bf.lean} kg Lean Mass</b> · Waist ${bf.waist} cm</div>` : ''}</div>`;
+
+  for (let f = 0; f < Math.ceil(N / 7); f++) {
+    h += `<details class="c" ${t > f * 7 && t <= f * 7 + 7 ? 'open' : ''}><summary class="o">Floor ${f + 1} · Days ${f * 7 + 1}–${Math.min(N, f * 7 + 7)}</summary>`;
+    for (let d = f * 7 + 1; d <= Math.min(N, f * 7 + 7); d++) {
+      const exList = getRawExercises(d), pg = S.prog[d] || {}, k = exList.filter((_, i) => pg[i]).length;
+      h += `<div class="c" style="margin:8px 0 0;${d === t ? 'border-color:var(--cy)' : ''}"><div class="row"><b>Day ${d} ${d % 4 === 0 ? '<span class="tag">Recovery</span>' : ''}</b><span><span class="mu">${k}/${exList.length} exercises</span> ${d % 4 !== 0 ? `<button style="padding:3px 8px;min-height:28px;font-size:11px" onclick="shuffleWorkout(${d})">🔀 Shuffle</button>` : ''}</span></div>` +
+        exList.map(([exName, defSets, defReps, defKg, bwRatio], idx) => {
+          const sets = getExerciseSets(d, idx, defSets, defReps, defKg, bwRatio);
+          const rec = getRecommendedTarget(exName, defSets, defReps, defKg, bwRatio);
+          const pr = (S.prs || {})[exName];
+          const isTime = /\((sec|min)\)/.test(exName);
+          return `<div style="margin-top:10px;padding-top:8px;border-top:1px solid #12203a">
+            <div class="row">
+              <span><b style="font-size:13px">${pg[idx] ? '✅ ' : ''}${esc(exName)}</b> <span class="mu">(${sets.length} sets)</span> ${pr && pr.bestStr ? `<span class="tag a">PR: ${esc(pr.bestStr)}</span>` : ''}</span>
+              <button data-x="${esc(exName)}" style="padding:3px 8px;min-height:28px;font-size:11px" onclick="tut(this.dataset.x)">How?</button>
+            </div>
+            <div class="rec-bar" style="margin-top:6px">
+              <span>🎯 <span class="mu">Recommended:</span> <b style="color:var(--cy)">${esc(rec.label)}</b></span>
+              <button class="e" style="padding:3px 8px;min-height:26px;font-size:11px" onclick="applyRecommendedToSets(${d},${idx})">Use Rec</button>
+            </div>
+            <div class="set-tbl">
+              <div class="set-hdr"><span>SET</span><span>LIFT (KG)</span><span>${isTime ? 'SEC / MIN' : 'REPS'}</span><span>DONE</span><span></span></div>
+              ${sets.map((s, sIdx) => `<div class="set-row">
+                <span class="mu" style="text-align:center;font-weight:700">#${sIdx + 1}</span>
+                <div class="stp">
+                  <button type="button" onclick="stepSetField(${d},${idx},${sIdx},'kg',-2.5)" aria-label="Decrease weight">−</button>
+                  <input type="number" inputmode="decimal" step=".5" value="${s.kg}" onchange="updateSetField(${d},${idx},${sIdx},'kg',this.value)" aria-label="Lift weight kg for set ${sIdx + 1}">
+                  <button type="button" onclick="stepSetField(${d},${idx},${sIdx},'kg',2.5)" aria-label="Increase weight">+</button>
+                </div>
+                <div class="stp">
+                  <button type="button" onclick="stepSetField(${d},${idx},${sIdx},'reps',-1)" aria-label="Decrease reps">−</button>
+                  <input type="number" inputmode="numeric" value="${s.reps}" onchange="updateSetField(${d},${idx},${sIdx},'reps',this.value)" aria-label="Reps for set ${sIdx + 1}">
+                  <button type="button" onclick="stepSetField(${d},${idx},${sIdx},'reps',1)" aria-label="Increase reps">+</button>
+                </div>
+                <input type="checkbox" style="width:22px;height:22px;margin:0 auto;accent-color:var(--em)" ${s.done ? 'checked' : ''} onchange="toggleSetDone(${d},${idx},${sIdx})" aria-label="Complete set ${sIdx + 1}">
+                ${sIdx === sets.length - 1 && sets.length > 1 ? `<button class="x" style="padding:2px;min-height:28px;font-size:11px" onclick="removeSetRow(${d},${idx})" title="Remove set">✕</button>` : '<span></span>'}
+              </div>`).join('')}
+              <div style="margin-top:6px;text-align:right"><button style="padding:4px 10px;min-height:28px;font-size:11px" onclick="addSetRow(${d},${idx})">+ Add Set</button></div>
+            </div>
+          </div>`;
+        }).join('') + `</div>`;
+    }
+    h += '</details>';
+  }
+  return h;
+}
+
+function logBodyMetrics() {
+  const w = +$('#wi').value, waist = +$('#mw').value, neck = +$('#mn').value, hip = +$('#mh').value;
+  if (w > 25) { S.wt.push({ d: today(), w }); S.p.w = w; }
+  if (waist > 30 || neck > 20) { S.meas = S.meas || []; S.meas.push({ d: today(), waist, neck, hip }); }
+  save();
+  toast('Biometrics & NSV measurements updated!');
+  R();
+}
+
+function vN() {
+  const c = calc(), T = tot(), rp = Math.max(0, c.pr - T.p), L = S.log[today()] || [];
+  const q = ($('#fs') || {}).value || '';
+  const fl = F.filter(x => x[0].toLowerCase().includes(q.toLowerCase()));
+  const best = RC.slice().sort((a, b) => b[2][1] - a[2][1])[0];
+  const recipes = RC.filter(r => {
+    if (!isFemale() && r[5] === 'Female') return false;
+    return S.rf === 'cheap' ? r[1] <= 30 : S.rf === 'pro' ? r[2][1] >= 18 : 1;
+  });
+
+  return vFemaleCard() +
+    `<div class="c s"><div class="row"><h3 style="margin:0">Macros today</h3><button onclick="openGroceryModal()">🛒 7-Day Grocery List</button></div><div class="mu" style="margin-top:4px">${esc(c.modeNote)}</div>${[['Calories', T.k, c.t, 'kcal'], ['Protein', T.p, c.pr, 'g'], ['Carbs', T.c, c.c, 'g'], ['Fat', T.f, c.f, 'g']].map(m => `<div class="mu" style="margin-top:6px">${m[0]}: ${Math.round(m[1])}/${m[2]} ${m[3]}</div>${B(m[1], m[2], m[1] > m[2] && m[0] === 'Calories' && !isMaternal() ? 'r' : 'g')}`).join('')}<div class="mu" style="margin-top:8px">BMR ${c.bmr} kcal · TDEE ${c.tdee} kcal · BMI ${c.bmi.toFixed(1)} · Quests auto-complete when targets are hit.</div></div>
+    <div class="c"><div class="mu" style="margin-bottom:4px">1-Tap Saved Meal Combos:</div><div class="row" style="justify-content:flex-start;margin-bottom:8px">${(S.combos || []).map((cb, idx) => `<button class="e" onclick="logCombo(${idx})">+ ${esc(cb.n)}</button>`).join('')}</div><div class="row"><input id="fs" placeholder="Search food OR type '2 roti + 1 dal + 1 curd'…" value="${esc(q)}" oninput="R(1)" onkeydown="if(event.key==='Enter')parseMultiMeal(this.value)" style="flex:1"><button class="p" onclick="parseMultiMeal($('#fs').value)">Quick Log</button></div><div style="max-height:210px;overflow:auto;margin-top:6px">${fl.map(x => `<div class="row" style="padding:5px 0;border-bottom:1px solid #12203a"><span>${esc(x[0])}<br><span class="mu">${x[1]} kcal · P${x[2]} C${x[3]} F${x[4]} · ~₹${x[6]}</span></span><button onclick="logF('${esc(x[0])}',${x[1]},${x[2]},${x[3]},${x[4]})">+ Add</button></div>`).join('')}</div><div class="row" style="margin-top:8px"><input id="cn" placeholder="Custom food" style="flex:2"><input id="ck" type="number" placeholder="kcal" style="flex:1"><input id="cp" type="number" placeholder="P g" style="flex:1"><button onclick="cf()">Add</button></div></div>
+    <div class="c"><div class="row" style="margin-bottom:6px"><h3 style="margin:0">Food log</h3>${L.length ? '<button onclick="saveCombo()">Save as Combo</button>' : ''}</div>${L.length ? L.map((x, i) => `<div class="row" style="padding:3px 0"><span>${esc(x.n)} <span class="mu">${x.k} kcal · P${x.p}</span></span><button class="x" style="min-height:30px;padding:3px 8px" onclick="delFood(${i})">✕</button></div>`).join('') : '<span class="mu">Nothing logged yet.</span>'}</div>
+    <div class="row"><h3>Budget kitchen (₹20–₹58)</h3><span><button onclick="S.rf='';R()">All</button> <button onclick="S.rf='cheap';R()">Under ₹30</button> <button onclick="S.rf='pro';R()">High protein</button></span></div>` +
+    recipes.map(r => `<div class="c"><div class="row"><b>${esc(r[0])}</b><span>₹${r[1]} ${rp > 15 && r === best ? '<span class="tag">System Recommended</span>' : ''} ${r[5] === 'Female' ? '<span class="tag f">Iron &amp; Folate</span>' : ''}</span></div><div class="mu">${Math.round(r[2][0])} kcal · P${r[2][1]} C${r[2][2]} F${r[2][3]} · ${esc(r[3])}</div><div style="font-size:12px;margin:4px 0">${esc(r[4])}</div><button onclick="logF('${esc(r[0])}',${r[2][0]},${r[2][1]},${r[2][2]},${r[2][3]})">Log recipe</button></div>`).join('');
+}
+
+function delFood(idx) {
+  const removed = S.log[today()].splice(idx, 1)[0];
+  verifyAntiCheatQuests(true);
+  save();
+  R();
+  toast('Removed ' + removed.n, 0, () => {
+    S.log[today()] = S.log[today()] || [];
+    S.log[today()].splice(idx, 0, removed);
+    verifyAntiCheatQuests(false);
+    save();
+    R();
+  });
+}
+function cf() { const n = $('#cn').value.trim(), k = +$('#ck').value; if (n && k) logF(n, k, +$('#cp').value || 0, 0, 0); }
+
+const SG = [
+  ['Morning Sunlight & Circadian Reset', '15 min of morning sun, no phone', 'SEN'],
+  ['Device-Free Family Hearth', '30 min screens off with family', 'INT'],
+  ['Verdant Nature Retreat', '20 min walk in a park or greenery', 'VIT'],
+  ['Mindful Breathwork & Stillness', '10 min box breathing', 'SEN']
+];
+function vS() {
+  return `<div class="c s"><b>Goal-Safe Sanctuary Shield</b><div class="mu">Restorative activities lower cortisol and award bonus XP without penalizing your fitness goals.</div></div>` +
+    [...SG, ...S.custom].map((g, i) => {
+      const k = today() + i, dn = S.sanct[k];
+      return `<div class="c s ${dn ? 'ok' : ''}"><div class="row"><div><div class="t">${esc(g[0])}</div><div class="mu">${esc(g[1])} · +20 XP · ${g[2]}</div></div><button class="e" onclick="sr('${k}',${i})">${dn ? 'Cleared ✓' : 'Enter gate'}</button></div></div>`;
+    }).join('') +
+    `<div class="c"><div class="row"><input id="sn" placeholder="Custom sanctuary name" style="flex:1"><button onclick="sc()">Create</button></div></div>`;
+}
+function sr(k, i) { if (S.sanct[k]) return; S.sanct[k] = 1; const g = [...SG, ...S.custom][i]; addXp(20); S.stats[g[2]]++; snd(880); toast('Sanctuary cleared. Cortisol down, +20 XP.'); save(); R(); }
+function sc() { const n = $('#sn').value.trim(); if (!n) return; S.custom.push([n, 'Custom restorative practice', 'SEN']); save(); R(); }
+
+/* ============================================================================
+   8. FEED, STORIES, GUILD BOSS RAID, LEADERBOARD & PRIVACY SHIELD
+============================================================================ */
+const HN = [
+  ['ShadowMonarch_K', 34, [60, 44, 30, 52, 28], 21, 78],
+  ['IronBhai', 22, [48, 30, 26, 40, 22], 12, 55],
+  ['ArjunArises', 17, [34, 38, 22, 30, 20], 9, 40],
+  ['PriyaFit', 13, [26, 28, 24, 29, 25], 15, 62],
+  ['NightWalker', 9, [20, 22, 18, 21, 15], 4, 25]
+];
+const SEED = [
+  ['PriyaFit', 'Tip: add a spoon of curd to your sprouts. Protein goes up and cravings go down.', 1, 3, ['Great tip!']],
+  ['IronBhai', 'Hit a new Goblet Squat PR today: 3 sets × 12 reps @ 20 kg!', 0, 5, []],
+  ['ShadowMonarch_K', 'Tip: drink a glass of water before every meal. You eat less without trying.', 1, 9, ['Doing this now']]
+];
+const FD = () => S.feed = S.feed || SEED.map((x, i) => ({ id: 's' + i, u: x[0], t: x[1], tip: !!x[2], likes: Array.from({ length: x[3] }, (_, j) => 'u' + j), cm: x[4].map(c => ['PriyaFit', c]), ts: Date.now() - i * 36e5, mediaKey: '' }));
+const ST = () => S.stories = S.stories || HN.slice(0, 4).map((h, i) => ({ u: h[0], t: ['Leg day PR 🔥', 'Sunrise walk', 'Meal prep Sunday', 'Day 21 cleared'][i], mediaKey: '', ts: Date.now() - i * 36e5 }));
+
+function pic(cam, cb) {
+  const i = document.createElement('input');
+  i.type = 'file';
+  i.accept = 'image/*';
+  if (cam) i.capture = 'environment';
+  i.onchange = () => {
+    const f = i.files[0];
+    if (!f) return;
+    const fr = new FileReader();
+    fr.onload = () => {
+      const im = new Image();
+      im.onload = () => {
+        const k = Math.min(1, 640 / Math.max(im.width, im.height));
+        const c = document.createElement('canvas');
+        c.width = im.width * k;
+        c.height = im.height * k;
+        c.getContext('2d').drawImage(im, 0, 0, c.width, c.height);
+        cb(c.toDataURL('image/jpeg', 0.68));
+      };
+      im.src = fr.result;
+    };
+    fr.readAsDataURL(f);
+  };
+  i.click();
+}
+
+function vSt() {
+  const L = ST().filter(s => Date.now() - s.ts < 864e5);
+  return `<div style="display:flex;gap:10px;overflow-x:auto;padding:4px 0 10px"><div style="text-align:center;min-width:64px"><button aria-label="Add your story" onclick="sadd()" style="width:58px;height:58px;border-radius:50%;font-size:26px;padding:0">+</button><div class="mu" style="font-size:11px">Your story</div></div>${L.map((s, i) => {
+    const imgUrl = s.mediaKey ? MEDIA_CACHE[s.mediaKey] : '';
+    return `<div style="text-align:center;min-width:64px"><button onclick="sv(${i})" style="width:58px;height:58px;border-radius:50%;padding:0;border:2px solid var(--em);overflow:hidden;font-size:18px">${imgUrl ? `<img src="${imgUrl}" style="width:100%;height:100%;object-fit:cover">` : esc(s.u[0])}</button><div class="mu" style="font-size:11px">${esc(s.u.slice(0, 9))}</div></div>`;
+  }).join('')}</div>`;
+}
+function sadd() { modal(`<h3 class="o">Add to your story</h3><input id="sc" placeholder="Say something (optional)" maxlength="80"><div class="row" style="margin-top:10px"><button class="p" onclick="pic(1,ssv)">Camera</button><button class="p" onclick="pic(0,ssv)">Gallery</button><button onclick="ssv('')">Text only</button></div><div class="mu" style="margin-top:6px">Stories disappear after 24 hours.</div>`); }
+async function ssv(img) {
+  const t = ($('#sc') || {}).value || '';
+  if (!img && !t.trim()) { toast('Add a photo or some text.', 1); return; }
+  let mk = '';
+  if (img) { mk = 'story_' + Date.now(); await IDB.put(mk, img); MEDIA_CACHE[mk] = img; }
+  ST().unshift({ u: pubName(), t: t.trim(), mediaKey: mk, ts: Date.now() });
+  save(); closeM(); R(); toast('Story added');
+}
+function sv(i) {
+  const L = ST().filter(s => Date.now() - s.ts < 864e5), s = L[i];
+  if (!s) { closeM(); return; }
+  const imgUrl = s.mediaKey ? MEDIA_CACHE[s.mediaKey] : '';
+  modal(`<div class="row"><b>${esc(s.u)}</b><span class="mu">${ago(s.ts)}</span></div>${B(i + 1, L.length)}<div style="margin:10px 0;min-height:160px;border-radius:10px;overflow:hidden;background:linear-gradient(135deg,#0b3a5a,#0a5a45);display:grid;place-items:center;text-align:center;padding:10px;color:#fff">${imgUrl ? `<img src="${imgUrl}" style="width:100%">` : ''}${s.t ? `<div style="font-size:18px;margin-top:6px">${esc(s.t)}</div>` : ''}</div><div class="row"><button ${i ? '' : 'disabled'} onclick="sv(${i - 1})">Back</button><button onclick="toast('Heart sent');snd(700)">❤ Like</button>${i < L.length - 1 ? `<button class="p" onclick="sv(${i + 1})">Next</button>` : '<button class="p" onclick="closeM()">Close</button>'}</div>`);
+}
+
+let PIMG = '';
+function pph(c) { pic(c, d => { PIMG = d; $('#pp').innerHTML = '<img src="' + d + '" style="width:100%;border-radius:8px;margin-top:6px;max-height:200px;object-fit:cover">'; }); }
+async function post() {
+  const t = $('#pt').value.trim();
+  if (!t && !PIMG) { toast('Write something or add a photo.', 1); return; }
+  let mk = '';
+  if (PIMG) { mk = 'post_' + Date.now(); await IDB.put(mk, PIMG); MEDIA_CACHE[mk] = PIMG; }
+  FD().unshift({ id: 'p' + Date.now(), u: pubName(), t, mediaKey: mk, tip: $('#ptip').checked, likes: [], cm: [], ts: Date.now(), me: 1 });
+  PIMG = ''; save(); R(); snd(600); toast('Posted');
+}
+function lk(id) { const p = FD().find(x => x.id === id), k = p.likes.indexOf('me'); k < 0 ? p.likes.push('me') : p.likes.splice(k, 1); save(); R(); }
+function cmt(id) { const v = $('#c' + id).value.trim(); if (!v) return; FD().find(x => x.id === id).cm.push([pubName(), v]); save(); R(); }
+function dp(id) {
+  const idx = FD().findIndex(x => x.id === id);
+  if (idx < 0) return;
+  const removed = S.feed.splice(idx, 1)[0];
+  save(); R();
+  toast('Post deleted', 0, () => { S.feed.splice(idx, 0, removed); save(); R(); });
+}
+
+const CH = {
+  g: [['ShadowMonarch_K', 'Day 21 cleared. Protein bowl was easy today.'], ['PriyaFit', 'Anyone trying the soya pulao? Rs 35 and 24 g protein.'], ['IronBhai', 'Mana surge to everyone grinding tonight.']],
+  v: [['ArjunArises', 'Vanguard check-in: who finished today\'s sets?'], ['PriyaFit', 'Done! Logged 3 sets × 12 reps.']]
+};
+function vC() {
+  S.chat = S.chat || { g: [], v: [] };
+  const c = S.ch || 'g', ms = [...CH[c], ...(S.chat[c] || [])];
+  return `<h3>Guild chat</h3><div class="c"><div class="row"><span><button class="${c === 'g' ? 'p' : ''}" onclick="S.ch='g';R()">Global Tavern</button> <button class="${c === 'v' ? 'p' : ''}" onclick="S.ch='v';R()">Guild Vanguard</button></span><button class="e" onclick="sp()">Share progress card</button></div><div style="max-height:220px;overflow:auto;margin:8px 0">${ms.map(m => `<div style="margin:4px 0"><b class="mu">${esc(m[0])}</b> ${esc(m[1])}</div>`).join('')}</div><div class="row"><input id="ci" placeholder="Message…" style="flex:1" onkeydown="if(event.key==='Enter')sm()"><button class="p" onclick="sm()">Send</button></div></div>`;
+}
+function sm() { const t = $('#ci').value.trim(); if (t) pm(t); }
+function pm(t) { const c = S.ch || 'g'; S.chat = S.chat || { g: [], v: [] }; S.chat[c].push([pubName(), t]); save(); snd(600); R(); }
+function sp() { const P = PV(), L = lv(); pm('📊 ' + (P.rank ? 'Lv ' + L.l + ' · Rank ' + rank(L.l) + ' · ' : '') + '🔥' + S.streak + 'd' + (P.prog ? ' · Goal ' + gp() + '%' : '') + (P.stats ? ' · STR ' + S.stats.STR + ' AGI ' + S.stats.AGI : '')); }
+
+function vFeed() {
+  const c = S.fv === 'c';
+  const seg = `<div class="row" style="justify-content:flex-start;margin-bottom:8px"><button class="${c ? '' : 'p'}" onclick="S.fv='f';R()">Feed</button><button class="${c ? 'p' : ''}" onclick="S.fv='c';R()">Chat</button></div>`;
+  if (c) return seg + vC();
+  return seg + vSt() + `<div class="c"><textarea id="pt" placeholder="Share progress, a PR, or a healthy tip..." maxlength="280" style="height:64px"></textarea><div id="pp"></div><div class="row" style="margin-top:6px"><span><button aria-label="Camera" onclick="pph(1)">📷</button> <button aria-label="Gallery" onclick="pph(0)">🖼</button> <label style="display:inline;color:var(--tx)"><input id="ptip" type="checkbox" style="width:auto"> Tip</label></span><button class="p" onclick="post()">Post</button></div></div>` +
+    FD().map(p => {
+      const imgUrl = p.mediaKey ? MEDIA_CACHE[p.mediaKey] : '';
+      return `<div class="c"><div class="row"><b>${esc(p.u)} ${p.tip ? '<span class="tag">TIP</span>' : ''}</b><span class="mu">${ago(p.ts)}</span></div><div style="margin:6px 0;white-space:pre-wrap">${esc(p.t)}</div>${imgUrl ? `<img src="${imgUrl}" style="width:100%;border-radius:8px;max-height:280px;object-fit:cover">` : ''}<div class="row" style="margin-top:6px"><button onclick="lk('${p.id}')">${p.likes.includes('me') ? '❤' : '🤍'} ${p.likes.length}</button><span class="mu">💬 ${p.cm.length}</span>${p.me ? `<button class="x" onclick="dp('${p.id}')">Delete</button>` : ''}</div>${p.cm.map(cm => `<div class="mu" style="margin-top:4px"><b>${esc(cm[0])}</b> ${esc(cm[1])}</div>`).join('')}<div class="row" style="margin-top:6px"><input id="c${p.id}" placeholder="Add a comment" style="flex:1" onkeydown="if(event.key==='Enter')cmt('${p.id}')"><button onclick="cmt('${p.id}')">Send</button></div></div>`;
+    }).join('');
+}
+
+function vG() {
+  const L = lv(), P = PV();
+  const boss = S.boss || { dmg: 12000, max: 20000 };
+  const remHp = Math.max(0, boss.max - boss.dmg);
+  const my = [pubName() + ' (You)', L.l, [S.stats.STR, S.stats.AGI, S.stats.INT, S.stats.VIT, S.stats.SEN], S.streak, gp()];
+  const all = [...HN, ...(P.on ? [my] : [])].sort((a, b) => b[1] - a[1]);
+  window.ALL = all;
+
+  return `<div class="c w" style="margin-top:8px"><div class="row"><b class="o" style="color:#d8b4fe">⚔️ Weekly Guild Co-Op Boss</b><span class="tag v">${remHp === 0 ? 'DEFEATED ✓' : remHp + ' HP LEFT'}</span></div><div class="mu" style="margin:4px 0">Cortisol &amp; Sugar Titan — Every quest you complete deals 18× XP damage!</div>${B(remHp, boss.max, 'r')}</div>` +
+    `<div class="c s"><div class="row"><span>Hunter Code: <b class="o">HNT-${[...S.p.name].reduce((a, c) => a * 31 + c.charCodeAt(0) >>> 0, 7).toString(36).toUpperCase()}</b></span><button class="e" onclick="shareCoachLink()">🔗 Share Coach Plan Link</button></div></div>` +
+    all.map((h, i) => `<div class="c" style="${h === my ? 'border-color:var(--em)' : ''}"><div class="row"><span><b class="o">#${i + 1}</b> ${esc(h[0])} <span class="mu">${h === my && !P.rank ? 'Rank hidden' : 'Lv ' + h[1] + ' · Rank ' + rank(h[1])} · 🔥${h[3]}</span></span><span><button onclick="cmp(${i})">Compare</button> ${h !== my ? `<button class="e" onclick="toast('Mana Surge sent to ${esc(h[0])}');snd(700)">Cheer</button>` : ''}</span></div></div>`).join('');
+}
+
+function cmp(i) {
+  const a = window.ALL[i], me = [pubName() + ' (You)', lv().l, [S.stats.STR, S.stats.AGI, S.stats.INT, S.stats.VIT, S.stats.SEN], S.streak, gp()];
+  const N = ['STR', 'AGI', 'INT', 'VIT', 'SEN'];
+  const r = (l, x, y) => `<div class="cmp"><div>${B(x, Math.max(x, y, 1))}<small>${x}</small></div><b class="mu">${l}</b><div>${B(y, Math.max(x, y, 1), 'g')}<small>${y}</small></div></div>`;
+  modal(`<h3 class="o">${esc(me[0])} vs ${esc(a[0])}</h3>${r('LVL', me[1], a[1])}${N.map((n, j) => r(n, me[2][j], a[2][j])).join('')}${r('STRK', me[3], a[3])}${r('GOAL%', me[4], a[4])}<button onclick="closeM()">Close</button>`);
+}
+
+function shareCoachLink() {
+  const encoded = btoa(JSON.stringify(S.p));
+  const url = location.origin + location.pathname + '#plan=' + encodeURIComponent(encoded);
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(url).then(() => toast('Coach Onboarding Link copied! Share with clients.')).catch(() => modal(`<textarea style="height:100px">${esc(url)}</textarea><button onclick="closeM()">Close</button>`));
+  } else {
+    modal(`<div class="mu">Share this URL with your client to load your exact plan:</div><textarea style="height:100px;margin:8px 0">${esc(url)}</textarea><button onclick="closeM()">Close</button>`);
+  }
+}
+
+/* ============================================================================
+   9. CALENDAR, GYM CHECK-IN (GPS + CODE + CAMERA QR), WATCH SYNC, B2B & ADMIN
+============================================================================ */
+function gl(dt, rec) {
+  const t = (S.gt || '07:00').replace(':', ''), h = +t.slice(0, 2), m = t.slice(2), D = dt.replace(/-/g, '');
+  return 'https://calendar.google.com/calendar/render?action=TEMPLATE&text=' + encodeURIComponent('THE SYSTEM: Daily Quest') + '&dates=' + D + 'T' + t + '00/' + D + 'T' + String((h + 1) % 24).padStart(2, '0') + m + '00&details=' + encodeURIComponent('Complete your daily quests in THE SYSTEM.') + (rec ? '&recur=' + encodeURIComponent('RRULE:FREQ=DAILY;COUNT=' + rec) : '');
+}
+
+function vK() {
+  const n = new Date(), b = new Date(n.getFullYear(), n.getMonth() + CM, 1), y = b.getFullYear(), mo = b.getMonth(), dim = new Date(y, mo + 1, 0).getDate();
+  const col = { h: 'var(--em)', t: 'var(--cy)', b: '#f59e0b' };
+  let cells = '';
+  for (let i = 0; i < b.getDay(); i++) cells += '<div></div>';
+  for (let d = 1; d <= dim; d++) {
+    const dt = y + '-' + String(mo + 1).padStart(2, '0') + '-' + String(d).padStart(2, '0'), k = S.cal[dt], st = dt >= S.start && !k && pdn(dt) <= S.p.days;
+    cells += `<button onclick="kd('${dt}')" style="padding:8px 0;${k ? 'border-color:' + col[k] + ';color:' + col[k] : ''}${dt === today() ? ';box-shadow:0 0 8px var(--cy)' : ''}">${d}<br><small class="mu">${k ? { h: 'Off', t: 'Trip', b: 'Busy' }[k] : st ? 'D' + pdn(dt) : '&nbsp;'}</small></button>`;
+  }
+  const left = Math.max(1, S.p.days - dayNo() + 1);
+  return `<div class="c"><div class="row"><button onclick="CM--;R()">‹</button><h3 class="o" style="margin:0">${b.toLocaleString('en', { month: 'long' })} ${y}</h3><button onclick="CM++;R()">›</button></div><div style="display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin-top:8px;text-align:center"><div class="mu">S</div><div class="mu">M</div><div class="mu">T</div><div class="mu">W</div><div class="mu">T</div><div class="mu">F</div><div class="mu">S</div>${cells}</div></div><div class="c s"><b>Plan around holidays and trips</b><div class="row" style="margin:6px 0"><input id="ka" type="date" style="flex:1"><input id="kb" type="date" style="flex:1"></div><div class="row"><select id="kt" style="flex:1"><option value="h">Holiday</option><option value="t">Travel</option><option value="b">Busy</option><option value="">Normal day</option></select><button class="p" onclick="kr()">Apply</button></div></div><div class="c"><b>Google Calendar Reminder</b><div class="row" style="margin-top:6px"><input id="gt" type="time" value="${S.gt || '07:00'}" oninput="S.gt=this.value;save()" style="flex:1"><a href="#" target="_blank" rel="noopener" onclick="this.href=gl(today(),${left})" style="background:var(--cy);color:#001018;padding:9px 12px;border-radius:6px;font:700 12px Inter;text-decoration:none">Add daily reminder</a></div></div>` + vGy() + vW();
+}
+function kd(dt) { modal(`<h3 class="o">${dt}</h3>${[['', 'Normal day'], ['h', 'Holiday'], ['t', 'Travel'], ['b', 'Busy']].map(x => `<button style="display:block;width:100%;margin:5px 0;padding:11px" onclick="ks('${dt}','${x[0]}')">${x[1]}</button>`).join('')}`); }
+function ks(dt, v) { v ? S.cal[dt] = v : delete S.cal[dt]; save(); closeM(); R(); toast('Calendar updated'); }
+function kr() { const a = $('#ka').value, b = $('#kb').value || a, v = $('#kt').value; if (!a) return; for (let d = new Date(a); d <= new Date(b); d.setDate(d.getDate() + 1)) { const k = d.toISOString().slice(0, 10); v ? S.cal[k] = v : delete S.cal[k]; } save(); R(); toast('Days updated'); }
+
+// Gym Check-In (GPS Geofence + Gym Code + Camera QR Scanner)
+function vGy() {
+  const g = S.gym;
+  const joinedOrg = (S.b2b?.orgs || []).find(o => o.code === S.acct?.orgCode && o.status === 'approved');
+  return `<div class="c s"><div class="row"><h3 style="margin:0">Gym &amp; Corporate Check-In</h3><span class="tag">+30 XP</span></div>
+    ${joinedOrg ? `<div class="sci" style="margin-bottom:8px">🏢 Member of <b>${esc(joinedOrg.name)}</b> · Active Private Challenge: <b class="g">${esc(joinedOrg.challenge)}</b></div>` : ''}
+    <div class="mu">${g ? 'Gym GPS saved. Check in at your gym, paste a Gym Code, or scan a QR poster.' : 'Check in via GPS geofence, Gym Join Code, or Camera QR scan.'}</div>
+    <div class="row" style="margin-top:8px"><button onclick="gset()">Save Gym GPS</button>${g ? '<button class="e" onclick="gchk()">GPS Check-In</button>' : ''}<button class="p" onclick="gqr()">📷 Scan QR</button></div>
+    <div class="row" style="margin-top:8px"><input id="gcode_in" placeholder="Enter Gym / Company Code (e.g. GYM-IRON88)" style="flex:1"><button class="e" onclick="gCodeCheckIn()">Verify Code</button></div></div>`;
+}
+
+function gCodeCheckIn() {
+  const code = ($('#gcode_in').value || '').trim().toUpperCase();
+  if (!code) { toast('Enter a valid Gym or Company code.', 1); return; }
+  const org = (S.b2b?.orgs || []).find(o => o.code.toUpperCase() === code);
+  if (org && org.status !== 'approved') {
+    toast('That organization is still pending Super-Admin approval.', 1);
+    return;
+  }
+  if (org) {
+    S.acct = S.acct || {};
+    S.acct.orgCode = org.code;
+  }
+  if (S.gci === today()) {
+    toast(org ? `Joined ${org.name}! (Already claimed daily check-in XP today)` : 'Already checked in today!');
+    save(); R(); return;
+  }
+  S.gci = today();
+  addXp(30);
+  save();
+  snd(780);
+  toast(org ? `Verified at ${org.name}! +30 XP` : `Gym Code ${code} verified! +30 XP`);
+  R();
+}
+
+function gps(f) {
+  if (!navigator.geolocation) { toast('Location unavailable.', 1); return; }
+  navigator.geolocation.getCurrentPosition(p => f(p.coords), () => toast('Allow location permission.', 1), { enableHighAccuracy: true, timeout: 12000 });
+}
+function gset() { gps(c => { S.gym = { la: c.latitude, lo: c.longitude }; save(); toast('Gym GPS location saved'); R(); }); }
+function gchk() {
+  gps(c => {
+    const E = 6371e3, r = x => x * Math.PI / 180;
+    const a = Math.sin(r(c.latitude - S.gym.la) / 2) ** 2 + Math.cos(r(S.gym.la)) * Math.cos(r(c.latitude)) * Math.sin(r(c.longitude - S.gym.lo) / 2) ** 2;
+    const m = 2 * E * Math.asin(Math.sqrt(a));
+    if (m > 250) { toast(`You are ${Math.round(m)} m from your gym.`, 1); return; }
+    if (S.gci === today()) { toast('Already checked in today'); return; }
+    S.gci = today(); addXp(30); save(); toast('Checked in at gym! +30 XP'); R();
+  });
+}
+
+async function gqr() {
+  if (!('BarcodeDetector' in window) || !navigator.mediaDevices) {
+    toast('Camera QR scanner requires Chrome/Android HTTPS. Use the Gym Code box right below!', 1);
+    return;
+  }
+  try {
+    const st = await navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment' } });
+    const v = document.createElement('video');
+    v.srcObject = st;
+    v.setAttribute('playsinline', '');
+    await v.play();
+    modal('<div class="row"><b class="o">Scan Gym QR Poster</b><button id="qr_stop">Close</button></div><div class="mu" style="margin:6px 0">Point camera at your gym\'s QR code</div>');
+    $('#m .mc').appendChild(v);
+    v.style.cssText = 'width:100%;border-radius:8px';
+    const bd = new BarcodeDetector({ formats: ['qr_code'] });
+    const stopAll = () => { clearInterval(t); st.getTracks().forEach(x => x.stop()); closeM(); };
+    $('#qr_stop').onclick = stopAll;
+    const t = setInterval(async () => {
+      const r = await bd.detect(v).catch(() => []);
+      if (r.length) {
+        stopAll();
+        if (S.gci !== today()) { S.gci = today(); addXp(30); save(); snd(800); toast('Gym QR scanned! +30 XP'); R(); }
+        else toast('Already checked in today!');
+      }
+    }, 500);
+  } catch (e) {
+    toast('Camera permission denied. Use the Gym Code box instead.', 1);
+  }
+}
+
+// Smartwatch & Bluetooth Heart Rate + Activity Sync
+let BPM = 0, WD = null;
+function vW() {
+  const w = S.watch || {};
+  return `<div class="c s"><h3 style="margin:0 0 6px">Smartwatch &amp; Health Sync</h3><div class="mu">${WD ? 'Connected: ' + esc(WD) + ' · ❤ <span id="bpm">' + (BPM || '--') + '</span> bpm' : 'Connect BLE heart rate or sync steps & sleep from Apple Health / Google Fit.'}</div><div class="row" style="margin:8px 0"><button class="e" onclick="cw()">⌚ Connect Watch (BLE)</button></div><div class="row"><input id="wst" type="number" placeholder="Steps today" value="${w.steps || ''}" style="flex:1"><input id="wsl" type="number" step=".1" placeholder="Sleep hours" value="${w.sleep || ''}" style="flex:1"><button class="p" onclick="syncW()">Sync</button></div></div>`;
+}
+async function cw() {
+  if (!navigator.bluetooth) { toast('Web Bluetooth requires Chrome/Android. Enter steps & sleep below.', 1); return; }
+  try {
+    const d = await navigator.bluetooth.requestDevice({ filters: [{ services: ['heart_rate'] }] });
+    const sv = await d.gatt.connect();
+    const s = await sv.getPrimaryService('heart_rate');
+    const ch = await s.getCharacteristic('heart_rate_measurement');
+    await ch.startNotifications();
+    ch.addEventListener('characteristicvaluechanged', e => {
+      const v = e.target.value;
+      BPM = v.getUint8(0) & 1 ? v.getUint16(1, true) : v.getUint8(1);
+      const el = $('#bpm');
+      if (el) el.textContent = BPM;
+    });
+    WD = d.name || 'Smartwatch';
+    toast('Watch connected: ' + WD);
+    R();
+  } catch (e) {
+    toast('Watch connection cancelled or unavailable.', 1);
+  }
+}
+function syncW() {
+  S.watch = { steps: +$('#wst').value || 0, sleep: +$('#wsl').value || 0 };
+  verifyAntiCheatQuests(false);
+  save();
+  toast('Watch numbers synced & verified!');
+  R();
+}
+
+// Profile, Privacy Shield, B2B Gym/Company Access & Super-Admin Command Console
+const PK = [['on', 'Broadcast online on leaderboard'], ['name', 'Show display name (off = Anonymous Shadow)'], ['rank', 'Share rank & level'], ['stats', 'Share combat stats (STR/AGI/INT/VIT/SEN)'], ['prog', 'Share goal progress %'], ['bio', 'Share exact height & weight']];
+
+function vPf() {
+  const L = lv(), P = PV();
+  const photoCount = Object.keys(MEDIA_CACHE).length;
+  const acct = S.acct || {};
+
+  return `<div class="c s"><div class="row"><div><div class="o" style="font-size:18px">${esc(S.p.name)}</div><div class="mu">${esc(S.p.title)} · ${isFemale() ? 'Female' : 'Male'} · Rank ${rank(L.l)} · Lv ${L.l}</div></div><button onclick="prof()">Edit details</button></div>${B(L.x, L.n)}<div class="mu" style="margin-top:6px">${Object.entries(S.stats).map(e => e[0] + ' ' + e[1]).join(' · ')}</div></div>
+  ${vFemaleCard()}
+  <div class="c w"><div class="row"><b>🏪 System XP Shop</b><span class="tag v">Available XP: ${S.xp}</span></div><div class="row" style="margin-top:8px"><div><b>❄️ Streak Freeze Token (Owned: ${S.freeze || 0})</b><div class="mu">Auto-protects your streak if you miss a day.</div></div><button class="v" onclick="buyFreeze()">Buy (200 XP)</button></div></div>
+  <details class="c" open><summary class="o">🛡️ Granular Hunter Privacy Shield</summary>${PK.map(x => `<label style="color:var(--tx);font-size:13px;margin:8px 0"><input type="checkbox" style="width:auto" ${P[x[0]] ? 'checked' : ''} onchange="PV().${x[0]}=this.checked?1:0;save();R()"> ${x[1]}</label>`).join('')}<div class="sci"><div class="mu">Live Public Hunter Card Preview:</div>${P.on ? `<b>${esc(pubName())}</b> · ${P.rank ? `Lv ${L.l} (Rank ${rank(L.l)})` : 'Rank hidden'} · ${P.prog ? `Goal ${gp()}%` : 'Progress hidden'}${P.stats ? `<br>${Object.entries(S.stats).map(e => e[0] + ' ' + e[1]).join(' · ')}` : ''}${P.bio ? `<br>${S.p.h} cm · ${S.p.w} kg` : ''}` : '<span class="mu">You appear offline and hidden from public leaderboards.</span>'}</div></details>
+  <details class="c"><summary class="o">🏢 Account, Gym/Company Portal &amp; Super-Admin</summary>
+    <div class="mu" style="margin:6px 0">${acct.signedIn ? `Signed in as <b>${esc(acct.email)}</b> ${acct.isAdmin ? '<span class="tag a">SUPER-ADMIN</span>' : ''}` : 'Sign in to sync across devices, request Gym/Company access, or open Super-Admin Console.'}</div>
+    <div class="row" style="justify-content:flex-start;margin-bottom:8px">
+      ${acct.signedIn ? `<button onclick="signOutAcct()">Sign Out</button>` : `<button class="p" onclick="openSignInModal()">Sign In / Admin Login</button>`}
+      <button class="e" onclick="openOrgRequestModal()">Request Gym / Company Access</button>
+      ${acct.isAdmin ? `<button class="a" onclick="openAdminConsole()">👑 Open Super-Admin Console</button>` : ''}
+    </div>
+  </details>
+  <details class="c" open><summary class="o">Guild Boss, Coach Link &amp; Leaderboard</summary>${vG()}</details>
+  <details class="c"><summary class="o">Help, Storage &amp; Data</summary><div class="mu" style="margin:6px 0">IndexedDB Media Vault: <b>${photoCount} photo${photoCount === 1 ? '' : 's'}</b> stored safely.</div><div class="row" style="justify-content:flex-start;margin-top:8px"><button onclick="tour(0)">Quick tour</button><button onclick="codex()">How it works</button><button onclick="bk()">Backup</button><button onclick="rs()">Restore</button><button class="x" onclick="delAll()">Reset</button></div></details>`;
+}
+
+function openSignInModal() {
+  modal(`<h3 class="o">Account &amp; Owner Sign-In</h3><div class="mu" style="margin-bottom:8px">Enter your email to sign in, or use Owner credentials (<code>admin@thesystem.app</code> / <code>SystemOwner#2026</code>).</div><input id="si_em" type="email" placeholder="Email" style="margin-bottom:8px"><input id="si_pw" type="password" placeholder="Password (required for Admin)" style="margin-bottom:10px"><div class="row"><button class="p" onclick="doSignIn()">Sign In</button><button onclick="closeM()">Cancel</button></div>`);
+}
+function doSignIn() {
+  const em = ($('#si_em').value || '').trim();
+  const pw = ($('#si_pw').value || '').trim();
+  if (!em || !em.includes('@')) { toast('Enter a valid email.', 1); return; }
+  if (em.toLowerCase() === 'admin@thesystem.app') {
+    if (pw !== 'SystemOwner#2026') { toast('Invalid Super-Admin password.', 1); return; }
+    S.acct = { email: em, signedIn: true, isAdmin: true, orgCode: S.acct?.orgCode || '' };
+    save(); closeM(); snd(840); toast('Welcome back, System Owner.'); R(); openAdminConsole(); return;
+  }
+  const banned = (S.b2b?.users || []).find(u => u.email.toLowerCase() === em.toLowerCase() && u.disabled);
+  if (banned) { toast('This account has been disabled by the System Administrator.', 1); return; }
+  S.acct = { email: em, signedIn: true, isAdmin: false, orgCode: S.acct?.orgCode || '' };
+  save(); closeM(); toast('Signed in as ' + em); R();
+}
+function signOutAcct() {
+  S.acct = { email: '', signedIn: false, isAdmin: false, orgCode: S.acct?.orgCode || '' };
+  save(); toast('Signed out.'); R();
+}
+
+function openOrgRequestModal() {
+  modal(`<h3 class="o">Gym &amp; Company B2B Access</h3><div class="mu" style="margin-bottom:8px">Request a dedicated workspace for your gym or company. Once approved by Super-Admin, you receive a Join Code for private member leaderboards and challenges.</div>
+    <input id="org_name" placeholder="Gym or Company Name" style="margin-bottom:8px">
+    <select id="org_type" style="margin-bottom:8px"><option value="Gym">Gym / Fitness Studio</option><option value="Company">Company / Corporate Wellness</option></select>
+    <input id="org_em" type="email" placeholder="Admin Contact Email" value="${esc(S.acct?.email || '')}" style="margin-bottom:8px">
+    <input id="org_chal" placeholder="First Private Challenge Name (e.g. 30-Day Step Cup)" style="margin-bottom:10px">
+    <div class="row"><button class="p" onclick="submitOrgReq()">Submit Access Request</button><button onclick="closeM()">Cancel</button></div>`);
+}
+function submitOrgReq() {
+  const name = ($('#org_name').value || '').trim();
+  const type = $('#org_type').value;
+  const email = ($('#org_em').value || '').trim();
+  const challenge = ($('#org_chal').value || '30-Day Fitness Sprint').trim();
+  if (!name || !email.includes('@')) { toast('Enter organization name and valid email.', 1); return; }
+  const code = (type === 'Gym' ? 'GYM-' : 'CORP-') + Math.random().toString(36).slice(2, 7).toUpperCase();
+  S.b2b.orgs.unshift({ id: 'org_' + Date.now(), name, type, email, status: 'pending', code, members: 1, challenge });
+  save(); closeM(); snd(680);
+  toast(`Request submitted for ${name}! Status: Pending Owner Approval.`);
+  R();
+}
+
+function openAdminConsole() {
+  if (!S.acct?.isAdmin) { toast('Super-Admin access required.', 1); return; }
+  const orgs = S.b2b.orgs || [];
+  const users = S.b2b.users || [];
+  const ev = S.b2b.globalEvent || { title: '', desc: '', active: false };
+
+  modal(`<div class="row"><h3 class="o" style="margin:0;color:var(--am)">👑 Super-Admin Command Console</h3><button onclick="closeM()">Close</button></div>
+    <div class="c ad" style="margin:10px 0">
+      <b>🌍 Global Challenge &amp; Event Broadcast</b>
+      <input id="ev_title" value="${esc(ev.title)}" placeholder="Event Title (e.g. Winter Arc)" style="margin:6px 0">
+      <input id="ev_desc" value="${esc(ev.desc)}" placeholder="Event Description" style="margin-bottom:6px">
+      <div class="row"><label style="color:var(--tx)"><input id="ev_act" type="checkbox" style="width:auto" ${ev.active ? 'checked' : ''}> Active Worldwide Banner</label><button class="a" onclick="saveGlobalEvent()">Broadcast Event</button></div>
+    </div>
+    <div class="c" style="margin:10px 0">
+      <b>🏢 Gym &amp; Company Access Approvals (${orgs.length})</b>
+      ${orgs.map((o, idx) => `<div class="sci" style="margin-top:6px">
+        <div class="row"><b>${esc(o.name)} <span class="tag c">${esc(o.type)}</span></b><span class="tag ${o.status === 'approved' ? '' : 'a'}">${o.status.toUpperCase()}</span></div>
+        <div class="mu">${esc(o.email)} · Join Code: <b>${esc(o.code)}</b> · Challenge: ${esc(o.challenge)}</div>
+        <div class="row" style="margin-top:6px;justify-content:flex-start">
+          ${o.status !== 'approved' ? `<button class="e" style="min-height:30px;padding:3px 9px" onclick="setOrgStatus(${idx},'approved')">Approve &amp; Issue Code</button>` : ''}
+          ${o.status !== 'rejected' ? `<button class="x" style="min-height:30px;padding:3px 9px" onclick="setOrgStatus(${idx},'rejected')">Reject / Suspend</button>` : ''}
+        </div>
+      </div>`).join('')}
+    </div>
+    <div class="c" style="margin:10px 0">
+      <b>👥 User Moderation</b>
+      ${users.map((u, idx) => `<div class="row" style="padding:5px 0;border-bottom:1px solid #12203a">
+        <span>${esc(u.name)} <span class="mu">(${esc(u.email)} · Lv ${u.lv})</span> ${u.disabled ? '<span class="tag" style="color:var(--cr);border-color:var(--cr)">DISABLED</span>' : ''}</span>
+        <button class="${u.disabled ? 'e' : 'x'}" style="min-height:30px;padding:3px 8px" onclick="toggleUserDisable(${idx})">${u.disabled ? 'Enable' : 'Disable'}</button>
+      </div>`).join('')}
+    </div>`);
+}
+function saveGlobalEvent() {
+  S.b2b.globalEvent = { title: $('#ev_title').value.trim(), desc: $('#ev_desc').value.trim(), active: $('#ev_act').checked };
+  save(); snd(800); toast('Global event updated!'); R(); openAdminConsole();
+}
+function setOrgStatus(idx, status) {
+  S.b2b.orgs[idx].status = status;
+  save(); snd(720); toast(`${S.b2b.orgs[idx].name} marked ${status.toUpperCase()}`); R(); openAdminConsole();
+}
+function toggleUserDisable(idx) {
+  S.b2b.users[idx].disabled = !S.b2b.users[idx].disabled;
+  save(); toast('User status updated.'); openAdminConsole();
+}
+
+function buyFreeze() {
+  if (S.xp < 200) { toast('Need at least 200 XP to purchase a Streak Freeze.', 1); return; }
+  S.xp -= 200; S.freeze = (S.freeze || 0) + 1; save(); snd(820); toast('Streak Freeze Token acquired! (❄️ ' + S.freeze + ')'); R();
+}
+
+function prof() {
+  const p = S.p;
+  const f = (l, i, v, t = 'number') => `<div><label>${l}</label><input id="${i}" type="${t}" step="any" value="${esc(v)}"></div>`;
+  const o = (a, v) => a.map(x => `<option value="${x[0]}" ${x[0] == v ? 'selected' : ''}>${x[1]}</option>`).join('');
+  modal(`<h3 class="o">Hunter Profile</h3><div class="grid">${f('Name', 'pn', p.name, 'text')}${f('Title', 'pt', p.title, 'text')}<div><label>Sex</label><select id="ps">${o([['m', 'Male'], ['f', 'Female']], p.sex)}</select></div>${f('Age', 'pa', p.age)}${f('Height (cm)', 'ph', p.h)}${f('Weight (kg)', 'pw', p.w)}${f('Target (kg)', 'ptw', p.tw)}<div><label>Activity</label><select id="pc">${o([[1.2, 'Mostly sitting'], [1.375, 'Light walking'], [1.55, 'Active'], [1.725, 'Very active']], p.act)}</select></div><div><label>Workout style</label><select id="pm">${o([['joint', 'Gentle / Joint-Safe'], ['bal', 'Balanced'], ['hiit', 'High-Intensity']], p.tier)}</select></div><div><label>Equipment</label><select id="pq">${o([['body', 'Bodyweight'], ['dumb', 'Dumbbells / Bands'], ['gym', 'Full gym'], ['desi', 'Desi style']], p.eq || 'body')}</select></div><div><label>Diet</label><select id="pd">${o(['Indian High-Protein Veg', 'Eggetarian', 'Omnivore', 'Plant-Based'].map(x => [x, x]), p.diet)}</select></div>${f('Commitment (days)', 'pdays', p.days)}</div><div class="row" style="margin-top:12px"><button class="p" onclick="ps()">Save</button><button onclick="closeM()">Cancel</button></div>`);
+}
+function ps() {
+  const g = i => $('#' + i).value;
+  Object.assign(S.p, { name: g('pn') || 'Hunter', title: g('pt'), sex: g('ps'), age: +g('pa'), h: +g('ph'), w: +g('pw'), tw: +g('ptw'), act: +g('pc'), tier: g('pm'), eq: g('pq'), diet: g('pd'), days: Math.max(1, Math.round(+g('pdays') || 30)) });
+  if (S.p.sex === 'm') S.p.fstage = 'std';
+  verifyAntiCheatQuests(true);
+  save(); closeM(); toast('Profile updated & recalculated!'); R();
+}
+
+// Streamlined 6-Step High-Conversion Onboarding
+let OS = 0, OA = { name: '', sex: 'm', age: 28, h: 170, w: 75, tw: 68, act: 1.375, diet: 'Indian High-Protein Veg', days: 30 };
+
+function ob() {
+  const m = $('#m');
+  if (OS >= 6) {
+    const sv = S.p;
+    S.p = Object.assign({}, sv, OA, { fstage: 'std', tier: 'bal', eq: 'body' });
+    const c = calc();
+    S.p = sv;
+    const endDt = new Date();
+    endDt.setDate(endDt.getDate() + OA.days);
+    const diffKg = Math.max(0, +(OA.w - OA.tw).toFixed(1));
+    const wkPace = Math.min(0.8, Math.max(0.3, +(c.def * 7 / 7700).toFixed(2)));
+    m.innerHTML = `<div class="mb"><div class="mc">
+      <div class="row"><span class="tag">+50 WELCOME XP READY</span><span class="mu">Plan Calibrated</span></div>
+      <div class="o" style="font-size:19px;margin:8px 0">Your Blueprint is Ready, ${esc(OA.name)}!</div>
+      <div class="c s" style="margin:8px 0">
+        <div class="grid">
+          <div><div class="mu">Daily Calories</div><b class="o" style="font-size:16px;color:var(--cy)">${c.t} kcal</b></div>
+          <div><div class="mu">Daily Protein</div><b class="o" style="font-size:16px;color:var(--em)">${c.pr} g</b></div>
+          <div><div class="mu">Target Date</div><b>${endDt.toLocaleDateString('en-IN', { day: 'numeric', month: 'short' })}</b></div>
+          <div><div class="mu">Safe Pace</div><b>${diffKg > 0 ? `~${wkPace} kg/wk` : 'Recomp & Tone'}</b></div>
+        </div>
+      </div>
+      <div class="mu" style="margin-bottom:10px">${OA.sex === 'f' ? 'Tip: Enable Cycle, PCOS, or Pregnancy support anytime under Women\'s Wellness in Profile or Body.' : 'Customize gym equipment, sets/reps, or privacy settings anytime.'}</div>
+      <button class="p" style="width:100%;padding:12px;font-size:14px" onclick="obf()">Claim +50 XP &amp; Start Day 1</button>
+    </div></div>`;
+    return;
+  }
+
+  let body = '';
+  if (OS === 0) {
+    body = `<div class="o" style="font-size:17px;margin:12px 0">What should THE SYSTEM call you?</div>
+      <input id="oi_name" type="text" value="${esc(OA.name)}" placeholder="Enter your name or Hunter alias" onkeydown="if(event.key==='Enter')obNext()">`;
+  } else if (OS === 1) {
+    body = `<div class="o" style="font-size:17px;margin:12px 0">Select your biological profile</div>
+      <button style="display:block;width:100%;margin:8px 0;padding:14px;${OA.sex === 'm' ? 'background:var(--cy);color:#001018' : ''}" onclick="OA.sex='m';OS++;ob()">Male</button>
+      <button style="display:block;width:100%;margin:8px 0;padding:14px;${OA.sex === 'f' ? 'background:var(--cy);color:#001018' : ''}" onclick="OA.sex='f';OS++;ob()">Female</button>`;
+  } else if (OS === 2) {
+    const ft = Math.floor(OA.h / 30.48), inch = Math.round(OA.h / 2.54 % 12);
+    body = `<div class="o" style="font-size:17px;margin:12px 0">Your age &amp; height</div>
+      <div class="grid">
+        <div><label>Age (years)</label><input id="oi_age" type="number" min="14" max="90" value="${OA.age}"></div>
+        <div><label>Height (cm)</label><input id="oi_h" type="number" min="120" max="220" value="${OA.h}" oninput="$('#h_prev').textContent='≈ '+Math.floor(this.value/30.48)+' ft '+Math.round(this.value/2.54%12)+' in'"></div>
+      </div>
+      <div id="h_prev" class="mu" style="margin-top:6px">≈ ${ft} ft ${inch} in</div>`;
+  } else if (OS === 3) {
+    body = `<div class="o" style="font-size:17px;margin:12px 0">Current &amp; target weight</div>
+      <div class="grid">
+        <div><label>Current weight (kg)</label><input id="oi_w" type="number" step=".1" min="30" max="250" value="${OA.w}"></div>
+        <div><label>Target weight (kg)</label><input id="oi_tw" type="number" step=".1" min="30" max="250" value="${OA.tw}"></div>
+      </div>`;
+  } else if (OS === 4) {
+    body = `<div class="o" style="font-size:17px;margin:12px 0">Daily activity &amp; diet</div>
+      <label>Normal daily activity</label>
+      <select id="oi_act" style="margin-bottom:10px">
+        <option value="1.2" ${OA.act == 1.2 ? 'selected' : ''}>Mostly sitting (desk / home)</option>
+        <option value="1.375" ${OA.act == 1.375 ? 'selected' : ''}>Light walking &amp; errands</option>
+        <option value="1.55" ${OA.act == 1.55 ? 'selected' : ''}>Active / on feet often</option>
+        <option value="1.725" ${OA.act == 1.725 ? 'selected' : ''}>Very active / physical job</option>
+      </select>
+      <label>Preferred diet</label>
+      <select id="oi_diet">
+        ${['Indian High-Protein Veg', 'Eggetarian', 'Omnivore', 'Plant-Based'].map(x => `<option value="${x}" ${OA.diet === x ? 'selected' : ''}>${x}</option>`).join('')}
+      </select>`;
+  } else if (OS === 5) {
+    body = `<div class="o" style="font-size:17px;margin:12px 0">Choose your commitment timeline</div>
+      ${[[14, '14 Days — Quick Momentum'], [30, '30 Days — Habit & Fat-Loss Ignition'], [60, '60 Days — Visible Transformation'], [90, '90 Days — Full Body Recomposition']].map(([d, lbl]) => `<button style="display:block;width:100%;margin:6px 0;padding:12px;${OA.days === d ? 'background:var(--cy);color:#001018' : ''}" onclick="OA.days=${d};OS++;ob()">${lbl}</button>`).join('')}`;
+  }
+
+  m.innerHTML = `<div class="mb"><div class="mc">
+    <div class="row"><span class="mu">Step ${OS + 1} of 6</span><span class="mu">~15 sec setup</span></div>
+    ${B(OS + 1, 6)}
+    ${body}
+    <div class="row" style="margin-top:14px">
+      <button ${OS ? '' : 'disabled'} onclick="OS--;ob()">Back</button>
+      ${OS === 1 || OS === 5 ? '' : '<button class="p" onclick="obNext()">Continue</button>'}
+    </div>
+  </div></div>`;
+  const inp = m.querySelector('input');
+  if (inp) inp.focus();
+}
+
+function obNext() {
+  if (OS === 0) {
+    const v = ($('#oi_name').value || '').trim();
+    if (!v) { toast('Please enter your name.', 1); return; }
+    OA.name = v;
+  } else if (OS === 2) {
+    const age = +$('#oi_age').value, h = +$('#oi_h').value;
+    if (age < 14 || age > 90 || h < 120 || h > 220) { toast('Enter valid age (14–90) and height (120–220 cm).', 1); return; }
+    OA.age = age; OA.h = h;
+  } else if (OS === 3) {
+    const w = +$('#oi_w').value, tw = +$('#oi_tw').value;
+    if (w < 30 || w > 250 || tw < 30 || tw > 250) { toast('Enter valid weights (30–250 kg).', 1); return; }
+    OA.w = w; OA.tw = tw;
+  } else if (OS === 4) {
+    OA.act = +$('#oi_act').value; OA.diet = $('#oi_diet').value;
+  }
+  OS++; ob();
+}
+
+function obf() {
+  Object.assign(S.p, OA, { fstage: 'std', tier: 'bal', eq: 'body' });
+  S.w0 = OA.w; S.start = today(); S.ob = 1; S.xp = 50; S.done = {}; S.prog = {}; S.wt = [];
+  save(); closeM(); snd(780); toast('Awakened! +50 Welcome XP credited.'); R();
+}
+
+const TR = [
+  ['Quests', '🎯', 0, 'Water, steps, sleep, protein, calories & workouts auto-complete when real numbers are logged.'],
+  ['Program', '🏋️', 1, 'Log exact Sets × Reps × kg per exercise, beat your PRs, or shuffle routines anytime.'],
+  ['Body', '💪', 2, 'Type "2 roti + 1 dal + 1 curd" in 1 tap, get a 7-day grocery list, and clear Sanctuary gates.'],
+  ['Feed', '📸', 3, 'Post progress, share stories, and chat with the Guild.'],
+  ['Calendar', '📅', 4, 'Check in at your gym via GPS, Code, or Camera QR, or tap your Hunter Name at the top for Profile & Admin Console.']
+];
+function tour(i) {
+  if (i >= TR.length) { S.ver = VER; save(); tab = 0; R(); closeM(); if (S.brief !== today()) brief(); return; }
+  const t = TR[i];
+  tab = t[2]; R();
+  modal(`<div class="mu">Quick tour · ${i + 1} of ${TR.length}</div><div style="font-size:40px;margin:6px 0">${t[1]}</div><h3 class="o" style="margin:0 0 6px">${t[0]}</h3><div>${t[3]}</div>${B(i + 1, TR.length)}<div class="row" style="margin-top:12px"><button onclick="S.ver=VER;save();closeM()">Skip</button><span><button ${i ? '' : 'disabled'} onclick="tour(${i - 1})">Back</button> <button class="p" onclick="tour(${i + 1})">${i < TR.length - 1 ? 'Next' : 'Start'}</button></span></div>`);
+}
+
+/* ============================================================================
+   10. ACTIONABLE AI COACH & 30-DAY PHOTO CHECK-IN
+============================================================================ */
+let CCH = [];
+function pushCoachQuest(title, xp, st) {
+  S.extraQuests = S.extraQuests || [];
+  S.extraQuests.push({ id: 'cq_' + Date.now(), d: today(), t: title, xp, st, auto: false, r: 'Recommended by System AI Coach tailored to your current state.', l: 'Optional Coach bonus — zero penalty if skipped.' });
+  save(); snd(720); toast('Added to Today\'s Quests: ' + title); R();
+}
+function getCoachAction(q) {
+  const s = q.toLowerCase();
+  if (/eat|food|dinner|lunch|hungry|snack|sweet|protein/.test(s)) {
+    return {
+      text: `You have ~${Math.max(0, calc().t - Math.round(tot().k))} kcal and ${Math.max(0, calc().pr - Math.round(tot().p))} g protein left today. Try Curd & Sprout Chaat (210 kcal, 17g P) or Soya Pulao!`,
+      btnLabel: '+ Log Curd & Sprout Chaat (210 kcal)',
+      onClick: `logF('Curd sprout chaat',210,17,26,5);closeM();`
+    };
+  }
+  if (/10|minute|busy|tired|desk|quick/.test(s)) {
+    return {
+      text: isMaternal()
+        ? 'Try a gentle 10-Minute Prenatal Mobility & Walk: 5 min easy walk + Cat-Cow + Pelvic Tilts.'
+        : 'Do a 10-Minute Express Circuit: 2 sets × 15 squats, 2 sets × 10 push-ups, and a 30s plank.',
+      btnLabel: '+ Add 10-Min Circuit to Today\'s Quests',
+      onClick: `pushCoachQuest('Coach Bonus: 10-Min Express Circuit',25,'AGI');closeM();`
+    };
+  }
+  return {
+    text: `Hit ${calc().pr}g protein, log your sets in Program, and clear 3+ quests today to keep your ${S.streak}-day streak alive!`,
+    btnLabel: '+ Add 5-Min Post-Meal Walk to Quests',
+    onClick: `pushCoachQuest('Coach Habit: 5-Min Post-Meal Walk',15,'AGI');closeM();`
+  };
+}
+function cmh() {
+  return CCH.map(m => `<div style="margin:8px 0;text-align:${m.r === 'u' ? 'right' : 'left'}"><div class="${m.r === 'u' ? 'bu' : ''}" style="display:inline-block;max-width:90%;padding:9px 11px;border-radius:10px;${m.r === 'u' ? '' : 'background:var(--bg);border:1px solid #00e5ff40;'}text-align:left;white-space:pre-wrap">${esc(m.t)}${m.act ? `<div style="margin-top:8px"><button class="e" style="width:100%" onclick="${m.act.onClick}">${esc(m.act.btnLabel)}</button></div>` : ''}</div></div>`).join('') || '<div class="mu">Ask Coach anything — I know your live macros &amp; streak and can log meals or push workouts straight to your Quests!</div>';
+}
+function cup() { const e = $('#cm'); if (e) { e.innerHTML = cmh(); e.scrollTop = e.scrollHeight; } }
+function coach() {
+  modal(`<div class="row"><h3 class="o" style="margin:0">🤖 System AI Coach</h3><button onclick="closeM()">Close</button></div><div id="cm" style="max-height:46vh;overflow:auto;margin:8px 0">${cmh()}</div><div class="row" style="justify-content:flex-start">${['What should I eat tonight?', 'I have only 10 minutes', 'How do I stay consistent?'].map(q => `<button onclick="cask(this.dataset.q)" data-q="${q}" style="font-size:11px">${q}</button>`).join('')}</div><div class="row" style="margin-top:8px"><input id="cq" placeholder="Ask Coach..." style="flex:1" onkeydown="if(event.key==='Enter')cask()"><button class="p" onclick="cask()">Ask</button></div>`);
+  cup();
+}
+function cask(q) {
+  const i = $('#cq'); q = q || (i && i.value.trim()); if (!q) return; if (i) i.value = '';
+  CCH.push({ r: 'u', t: q });
+  const ans = getCoachAction(q);
+  CCH.push({ r: 'a', t: ans.text, act: ans });
+  snd(620); cup();
+}
+
+function phq(m) {
+  const p = MEDIA_CACHE['photo_' + m];
+  modal(`<h3 class="o">Day ${m} Transformation Photo</h3>${p ? `<img src="${p}" style="width:100%;border-radius:8px;max-height:280px;object-fit:cover">` : '<div class="mu">No photo yet.</div>'}<div class="row" style="margin:10px 0"><button class="p" onclick="pk(${m},1)">Take photo</button><button class="p" onclick="pk(${m},0)">From gallery</button>${p ? `<button class="x" onclick="pdel(${m})">Delete</button>` : ''}</div><div class="mu">Stored privately in IndexedDB. +25 XP on first check-in.</div>`);
+}
+function pk(m, cam) {
+  pic(cam, async dataUrl => {
+    await IDB.put('photo_' + m, dataUrl);
+    MEDIA_CACHE['photo_' + m] = dataUrl;
+    S.ph = S.ph || {};
+    if (!S.ph[m]) { S.ph[m] = 1; addXp(25); if (Object.keys(S.ph).length === 5) toast('Badge Unlocked: Transformation Monarch!'); }
+    save(); R(); phq(m);
+  });
+}
+async function pdel(m) { await IDB.del('photo_' + m); delete MEDIA_CACHE['photo_' + m]; if (S.ph) delete S.ph[m]; save(); R(); closeM(); }
+
+function bk() { const t = JSON.stringify(S); (navigator.clipboard ? navigator.clipboard.writeText(t) : Promise.reject()).then(() => toast('Backup copied!')).catch(() => modal('<textarea style="height:160px">' + esc(t) + '</textarea><button onclick="closeM()">Close</button>')); }
+function rs() { modal('<div class="mu">Paste backup JSON:</div><textarea id="rt" style="height:150px;margin:8px 0"></textarea><div class="row"><button class="p" onclick="rs2()">Restore</button><button onclick="closeM()">Cancel</button></div>'); }
+function rs2() { try { S = Object.assign(def(), JSON.parse($('#rt').value)); save(); closeM(); R(); toast('Backup restored!'); } catch (e) { toast('Invalid backup data.', 1); } }
+function delAll() { modal('<h3 class="o">Reset all data?</h3><p class="mu">Clears progress, IndexedDB photos, and settings.</p><div class="row"><button class="x" onclick="dl2()">Yes, reset</button><button onclick="closeM()">Cancel</button></div>'); }
+async function dl2() { await IDB.clear(); MEDIA_CACHE = {}; S = def(); save(); OS = 0; closeM(); tab = 0; R(); ob(); }
+
+function codex() {
+  modal(`<h3 class="o">How THE SYSTEM Works</h3><p><b>Anti-Cheat Verification:</b> Water, steps, sleep, protein, calories, and workouts auto-complete strictly when real numbers are logged.</p><p><b>Progressive Overload &amp; PRs:</b> Log exact Sets × Reps × kg in Program. Beating your previous weight or volume record unlocks a PR badge and bonus STR XP.</p><p><b>Metabolic Engine:</b> Mifflin-St Jeor BMR × activity factor − 20% safe deficit (floor 1500 kcal M / 1200 kcal F), protein 1.8 g/kg (+10% for age 40+). Maternal mode disables deficits and enforces pelvic-safe exercises.</p><button onclick="closeM()">Close</button>`);
+}
+
+function modal(h) { $('#m').innerHTML = `<div class="mb" role="dialog" aria-modal="true" onclick="if(event.target===this)closeM()"><div class="mc">${h}</div></div>`; }
+function closeM() { $('#m').innerHTML = ''; }
+
+function R(keep) {
+  const fs = document.activeElement && document.activeElement.id === 'fs';
+  hud();
+  nav();
+  $('#main').innerHTML = [vQ, vP, () => vN() + '<h3 class="o">Sanctuary</h3>' + vS(), vFeed, vK, vPf][tab]();
+  if (fs) {
+    const e = $('#fs');
+    if (e) { e.focus(); e.setSelectionRange(e.value.length, e.value.length); }
+  }
+}
+
+R();
+if (!S.ob) {
+  ob();
+} else {
+  if (freezeUsed) toast('❄️ Streak Freeze Token used! Your ' + S.streak + '-day streak was saved.');
+  else if (pen) toast('Streak reset: fewer than 3 quests completed yesterday.', 1);
+  if (S.ver !== VER) { S.ver = VER; save(); }
+  if (S.brief !== today()) brief();
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && S.ob && $('#m .mb')) closeM(); });
+</script>
+</body>
+</html>

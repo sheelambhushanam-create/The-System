@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="VITALITY — INTELLIGENT WELLNESS logo">
+  <defs>
+    <radialGradient id="obsidianGlow" cx="50%" cy="46%" r="58%">
+      <stop offset="0%" stop-color="#0d2f27" />
+      <stop offset="55%" stop-color="#071712" />
+      <stop offset="100%" stop-color="#040d0a" />
+    </radialGradient>
+    <linearGradient id="infinityGrad" x1="18%" y1="30%" x2="82%" y2="70%">
+      <stop offset="0%" stop-color="#00e5ff" />
+      <stop offset="50%" stop-color="#22d3ee" />
+      <stop offset="100%" stop-color="#10b981" />
+    </linearGradient>
+    <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00e5ff" stop-opacity="0.48" />
+      <stop offset="100%" stop-color="#10b981" stop-opacity="0.22" />
+    </linearGradient>
+    <filter id="cyanGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="7" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <filter id="ecgGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Full-bleed dark obsidian square canvas for maskable & any icon compliance -->
+  <rect width="512" height="512" fill="#071712" />
+  <rect width="512" height="512" fill="url(#obsidianGlow)" />
+
+  <!-- Subtle outer calibration rings inside maskable 80% safe zone -->
+  <circle cx="256" cy="256" r="184" fill="none" stroke="url(#ringGrad)" stroke-width="2" />
+  <circle cx="256" cy="256" r="168" fill="none" stroke="#10b981" stroke-opacity="0.14" stroke-width="1.5" stroke-dasharray="6 10" />
+
+  <!-- Cyan-Emerald Infinity Pulse Emblem (centered in safe zone) -->
+  <g filter="url(#cyanGlow)">
+    <path
+      d="M 256 244
+         C 228 194, 146 194, 146 244
+         C 146 294, 228 294, 256 244
+         C 284 194, 366 194, 366 244
+         C 366 294, 284 294, 256 244 Z"
+      fill="none"
+      stroke="url(#infinityGrad)"
+      stroke-width="20"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </g>
+
+  <!-- Inner dark cutout track for crisp ECG contrast -->
+  <path
+    d="M 152 244 L 204 244 L 222 212 L 244 282 L 268 188 L 288 264 L 304 244 L 360 244"
+    fill="none"
+    stroke="#071712"
+    stroke-width="14"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <!-- Crisp White ECG Heartbeat Line -->
+  <g filter="url(#ecgGlow)">
+    <path
+      d="M 152 244 L 204 244 L 222 212 L 244 282 L 268 188 L 288 264 L 304 244 L 360 244"
+      fill="none"
+      stroke="#ffffff"
+      stroke-width="7.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </g>
+
+  <!-- Pulse terminal nodes -->
+  <circle cx="152" cy="244" r="6" fill="#00e5ff" />
+  <circle cx="360" cy="244" r="6" fill="#10b981" />
+  <circle cx="268" cy="188" r="5" fill="#ffffff" />
+
+  <!-- Brand Typography inside safe zone -->
+  <text
+    x="256"
+    y="352"
+    text-anchor="middle"
+    fill="#e6fff9"
+    font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"
+    font-size="26"
+    font-weight="800"
+    letter-spacing="7"
+  >
+    VITALITY
+  </text>
+  <text
+    x="256"
+    y="378"
+    text-anchor="middle"
+    fill="#4edea3"
+    font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"
+    font-size="11.5"
+    font-weight="700"
+    letter-spacing="3.5"
+  >
+    INTELLIGENT WELLNESS
+  </text>
+</svg>

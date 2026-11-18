@@ -1,0 +1,8 @@
+{
+  "name": "Remix Remix Remix Remix Remix Remix The System — Universal Wellness",
+  "description": "Adaptive wellness, biometric tracking, progressive training, and nutrition platform with Universal Clean, Women-Centric, and Vanguard RPG themes.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

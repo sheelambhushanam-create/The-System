@@ -1,0 +1,39 @@
+{
+  "version": "1.1.0",
+  "updatedAt": "2026-11-18",
+  "guidelines": {
+    "proteinPerKgStandard": 1.8,
+    "proteinPerKgPcos": 1.9,
+    "mastersLeucineAge": 40,
+    "mastersProteinMultiplier": 1.1,
+    "rpeTargetDefault": 8,
+    "defaultRestSec": 60,
+    "metabolicRestSec": 45,
+    "sources": [
+      "ISSN Position Stand: Protein & Exercise",
+      "ACSM Resistance Training Progression Models",
+      "Mifflin-St Jeor Resting Metabolic Rate Equation"
+    ]
+  },
+  "contraindicationsNote": "Maternal Safety Shield enforces ACOG trimester limits (supine & axial load swaps in T2/T3 and diastasis recti protection postpartum).",
+  "recipes": [
+    {
+      "name": "Tofu & Palak Scramble",
+      "costInr": 42,
+      "macros": [250, 18, 12, 14],
+      "ingredients": "Tofu (120 g), spinach, onion, tomato, turmeric",
+      "steps": "Crumble tofu · Sauté onion, tomato & palak 3 min · Toss tofu with turmeric & cumin",
+      "tag": "Veg",
+      "allergenTags": ["soy"]
+    },
+    {
+      "name": "Roasted Chana Sattu Cooler",
+      "costInr": 22,
+      "macros": [230, 15, 34, 4],
+      "ingredients": "Sattu flour (50 g), lemon, black salt, mint, jeera",
+      "steps": "Whisk sattu into 300 ml water · Squeeze fresh lemon & season with roasted cumin",
+      "tag": "Veg",
+      "allergenTags": ["lentils_beans"]
+    }
+  ]
+}
